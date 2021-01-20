@@ -44,7 +44,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
 
-" GUI Enhancements
+" GUI Enhancements'
 Plug 'machakann/vim-highlightedyank'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -81,7 +81,7 @@ let airline#extensions#tmuxline#snapshot_file = "~/.config/tmux/tmux-status.conf
 
 let g:tmuxline_powerline_separators = 0
 let g:tmuxline_preset = {
-        \ 'a': '[#S]',
+        \ 'a': '#S',
         \ 'win': '#I:#W#F',
         \ 'cwin': '#I:#W#F',
         \ 'x': '#{prefix_highlight}',
@@ -125,9 +125,11 @@ nnoremap <Leader>tt :NERDTreeToggle<CR>
 nnoremap <Leader>tp :NERDTreeFind<CR>
 "nmap <Leader>tr <20>fr<20>p
 
+
 " Telescope find
 lua require('telescope').setup({defaults = {file_sorter = require('telescope.sorters').get_fzy_sorter}})
 nnoremap <C-p> :lua require('telescope.builtin').git_files()<CR>
+
 
 " LSP
 set completeopt=menuone,noinsert,noselect
@@ -138,16 +140,15 @@ nnoremap <leader>vi :lua vim.lsp.buf.implementation()<CR>
 
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
-" vim completions
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
+lua require'lspconfig'.tsserver.setup{ on_attach=require'completion'.on_attach  }
 lua require'lspconfig'.clangd.setup{ on_attach=require'completion'.on_attach }
 lua require'lspconfig'.pyls.setup{ on_attach=require'completion'.on_attach }
 lua require'lspconfig'.rust_analyzer.setup{ on_attach=require'completion'.on_attach; settings={rust_analyzer={inlayHints={typeHints=true}}} }
 
 let g:vim_markdown_folding_disabled = 1
 
-" vim fugitive remaps
 nnoremap <Leader>gs :G<CR>
