@@ -40,9 +40,9 @@ Plug 'plasticboy/vim-markdown'
 call plug#end()
 
 " source plugin configs
-source ./lsp.vim
-source ./telescope.vim
-source ./nerdtree.vim
+source ~/.config/nvim/lsp.vim
+source ~/.config/nvim/telescope.vim
+source ~/.config/nvim/nerdtree.vim
 
 " misc plugin configs
 let g:vim_markdown_folding_disabled = 1

@@ -1,4 +1,4 @@
-source ./sets.vim
-source ./plugins.vim
-source ./appearance.vim
-source ./remap.vim
+source ~/.config/nvim/sets.vim
+source ~/.config/nvim/plugins.vim
+source ~/.config/nvim/appearance.vim
+source ~/.config/nvim/remap.vim
