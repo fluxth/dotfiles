@@ -1,2 +1,2 @@
-fluxth's dotfiles
-use with caution, not yet completed!
+fluxth's personal configuration files
+maybe unstable, use with caution!
