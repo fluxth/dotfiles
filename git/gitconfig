@@ -1,11 +1,11 @@
 [user]
-	name = fluxTH
-	email = fuu.thitat@gmail.com
+    name = fluxTH
+    email = flux@fluxthitat.me
 [diff]
     tool = nvimdiff
 [difftool "nvimdiff"]
-     cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 [pull]
-	ff = only
+    ff = only
 [alias]
-	d = difftool
+    d = difftool
