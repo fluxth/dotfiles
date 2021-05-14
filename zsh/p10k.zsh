@@ -94,6 +94,7 @@
     taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
     vi_mode
     time                    # current time
+    # arch
     # ip                    # ip address and bandwidth usage for a specified network interface
     # public_ip             # public IP address
     # proxy                 # system-wide http/https/ftp proxy
@@ -1524,6 +1525,16 @@
   # Type `p10k help segment` for documentation and a more sophisticated example.
   function prompt_example() {
     p10k segment -f 208 -i '⭐' -t 'hello, %n'
+  }
+
+  function prompt_arch() {
+    if [ "$ENV_ARCH" = "arm64" ]; then
+        local color=245
+    else
+        local color=166
+    fi
+
+    p10k segment -t "%F{240}|%F{$color} $ENV_ARCH"
   }
 
   # User-defined prompt segments may optionally provide an instant_prompt_* function. Its job
