@@ -2,7 +2,7 @@ syntax on
 
 set exrc
 set nocompatible
-set guicursor=
+"set guicursor=
 set noshowmatch
 set noshowmode
 set relativenumber
@@ -26,6 +26,9 @@ set scrolloff=8
 set shortmess+=c
 set signcolumn=yes
 set mouse=a
+
+set splitright
+set splitbelow
 
 set updatetime=300
 
