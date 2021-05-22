@@ -28,5 +28,9 @@ nnoremap <C-j> :bn<CR>
 nnoremap <C-k> :bp<CR>
 
 " split panes
-nnoremap <Leader>sh :sp<CR>
-nnoremap <Leader>sv :vsp<CR>
+nnoremap <leader>sh :sp<CR>
+nnoremap <leader>sv :vsp<CR>
+
+" diff remaps
+nnoremap <leader>sp :diffput<CR>
+nnoremap <leader>sg :diff<CR>
