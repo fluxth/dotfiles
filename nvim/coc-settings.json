@@ -1,0 +1,12 @@
+{
+  "rust-analyzer.cargo-watch.enable": false,
+  "rust-analyzer.serverPath": "rust-analyzer",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "css",
+    "scss"
+  ]
+}
