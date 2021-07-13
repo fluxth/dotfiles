@@ -1,5 +1,2 @@
-# EasyList Thailand
-https://raw.githubusercontent.com/easylist-thailand/easylist-thailand/master/subscription/easylist-thailand.txt
-
 # Block crypto-mining JS
 https://github.com/hoshsadiq/adblock-nocoin-list/raw/master/nocoin-ublock.txt

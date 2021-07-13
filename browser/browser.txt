@@ -1,4 +1,0 @@
-Browser: Brave Browser
-
-Extensions:
-- uBlock Origin (with THA list enabled and custom filters in `ublock-additional-filters.txt`)
