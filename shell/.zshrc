@@ -81,23 +81,28 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
 KEYTIMEOUT=1
-export EDITOR='nvim'
 
 bindkey '^ ' autosuggest-accept
-
-export TMUX_PLUGIN_MANAGER_PATH="$XDG_DATA_HOME/tmux/plugins"
+bindkey '^X' autosuggest-clear
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Language environment
 export LANG=en_US.UTF-8
 
+# Preferred editor for local and remote sessions
+export EDITOR='nvim'
+export MANPAGER="nvim -c 'set ft=man' -"
+export GPG_TTY=$(tty)
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
 # Alieses
+
+# Platform dependent configurations
+source "$XDG_CONFIG_HOME/zsh/macos.zsh"
 
 # Load powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

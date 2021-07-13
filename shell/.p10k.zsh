@@ -94,7 +94,7 @@
     taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
     vi_mode
     time                    # current time
-    # arch
+    arch
     # ip                    # ip address and bandwidth usage for a specified network interface
     # public_ip             # public IP address
     # proxy                 # system-wide http/https/ftp proxy
