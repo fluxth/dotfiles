@@ -11,7 +11,7 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 inoremap <c-j> <c-n>
 inoremap <c-k> <c-p>
 
-" Use <c-space> to trigger completion.
+" Use <c-\> to trigger completion.
 inoremap <silent><expr> <c-\> coc#refresh()
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
@@ -44,11 +44,23 @@ nmap <leader>vt <Plug>(coc-type-definition)
 nmap <leader>vi <Plug>(coc-implementation)
 nmap <leader>vr <Plug>(coc-references)
 
+" Diagnostics
+nnoremap <leader>ve :CocDiagnostics<CR>
+nmap <leader>v[ <Plug>(coc-diagnostic-prev)
+nmap <leader>v] <Plug>(coc-diagnostic-next)
+
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 
 " coc explorer
-nnoremap <space>e :CocCommand explorer<CR>
+nnoremap <leader>e :CocCommand explorer<CR>
 
 " coc snippet
 imap <C-l> <Plug>(coc-snippets-expand)
+
+vmap <leader>av <Plug>(coc-format-selected)
+nmap <leader>av <Plug>(coc-format-selected)
+
+let g:coc_filetype_map = {
+  \ 'htmldjango': 'html',
+  \ }
