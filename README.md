@@ -24,5 +24,5 @@ To uninstall, run:
 make clean
 ```
 
-Make will invoke GNU stow to create symlinks from this `dotfiles` repo to your XDG directories.
+Make will invoke GNU stow to create or remove symlinks from this `dotfiles` repo to your XDG directories.
 
