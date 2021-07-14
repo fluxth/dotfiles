@@ -1,0 +1,4 @@
+[submodule "personal"]
+	path = personal
+	url = git@github.com:fluxTH/dotfiles-personal.git
+	branch = main
