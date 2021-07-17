@@ -1,8 +1,9 @@
 .PHONY: install update clean platform
 
-install: platform .packages.lock update
+install: .packages.lock update
 
 update: platform
+	$(info Symlinking dotfiles...)
 	stow bin
 	stow editor
 	stow gui
@@ -10,8 +11,8 @@ update: platform
 	stow personal
 	stow shell
 
-clean: platform .packages.lock
-	$(info Cleaning dotfiles...)
+clean: .packages.lock
+	$(info Removing symlinks to dotfiles...)
 	stow -d bin
 	stow -d editor
 	stow -d gui
