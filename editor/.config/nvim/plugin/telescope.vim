@@ -8,6 +8,7 @@ nnoremap <leader>fs :lua require('telescope.builtin').grep_string({ search = vim
 nnoremap <leader>fw :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
 nnoremap <leader>fb :lua require('telescope.builtin').buffers()<CR>
 nnoremap <leader>fh :lua require('telescope.builtin').help_tags()<CR>
+nnoremap <leader>fe :lua require('telescope.builtin').file_browser()<CR>
 
 " custom modes
 nnoremap <leader>fd :lua require('fluxth.telescope').search_dotfiles()<CR>
