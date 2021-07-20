@@ -11,6 +11,8 @@ Plug 'andymass/vim-matchup'
 Plug 'alvan/vim-closetag'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
+Plug 'APZelos/blamer.nvim'
+Plug 'airblade/vim-gitgutter'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'preservim/nerdcommenter'
 
@@ -46,3 +48,8 @@ let g:rustfmt_fail_silently = 0
 inoremap <C-r> <C-x><C-u>
 
 let g:closetag_filenames = "*.html,*.jsx,*.tsx"
+
+" blamer.nvim configs
+let g:blamer_enabled = 1
+let g:blamer_show_in_insert_modes = 0
+let g:blamer_prefix = '   ✱ '

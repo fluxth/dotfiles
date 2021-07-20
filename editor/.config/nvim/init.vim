@@ -6,6 +6,11 @@ let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 highlight Normal guibg=none
 
+hi! link Blamer GruvboxBg2
+hi! link CocErrorSign GruvboxRedBold
+hi! link CocWarningSign GruvboxOrange
+hi! link CocInfoSign GruvboxBlue
+
 " Follow Rust code style rules
 autocmd Filetype rust set colorcolumn=100
 autocmd BufRead Cargo.toml call crates#toggle()
