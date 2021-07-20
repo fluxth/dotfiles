@@ -17,6 +17,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'preservim/nerdcommenter'
 
 " GUI Enhancements'
+Plug 'mhinz/vim-startify'
 Plug 'machakann/vim-highlightedyank'
 Plug 'mhinz/vim-crates'
 
