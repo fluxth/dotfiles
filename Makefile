@@ -4,21 +4,21 @@ install: platform .packages.lock update
 
 update: platform
 	$(info Symlinking dotfiles...)
-	stow bin
-	stow editor
-	stow gui
-	stow media
-	stow personal
-	stow shell
+	stow bin --ignore=.DS_Store
+	stow editor --ignore=.DS_Store
+	stow gui --ignore=.DS_Store
+	stow media --ignore=.DS_Store
+	stow personal --ignore=.DS_Store
+	stow shell --ignore=.DS_Store
 
 clean: platform .packages.lock
 	$(info Removing symlinks to dotfiles...)
-	stow -D bin
-	stow -D editor
-	stow -D gui
-	stow -D media
-	stow -D personal
-	stow -D shell
+	stow -D bin --ignore=.DS_Store
+	stow -D editor --ignore=.DS_Store
+	stow -D gui --ignore=.DS_Store
+	stow -D media --ignore=.DS_Store
+	stow -D personal --ignore=.DS_Store
+	stow -D shell --ignore=.DS_Store
 
 platform:
 ifeq ($(OS),Windows_NT)
