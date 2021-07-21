@@ -38,6 +38,9 @@ Plug 'psf/black'
 " Snippets
 Plug 'mlaursen/vim-react-snippets'
 
+" Tmux
+Plug 'edkolev/tmuxline.vim'
+
 call plug#end()
 
 " rust
