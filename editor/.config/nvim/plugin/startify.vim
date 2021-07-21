@@ -4,7 +4,7 @@ let s:startify_ascii_header = [
  \ '  /  |/ / _ \/ __ \ | / / / __ `__ \',
  \ ' / /|  /  __/ /_/ / |/ / / / / / / /',
  \ '/_/ |_/\___/\____/|___/_/_/ /_/ /_/  ' .
- \ 'v' . matchstr(execute('version'), 'NVIM v\zs[^\n]*'),
+ \ matchstr(execute('version'), 'NVIM \zs[^\n]*'),
  \ '',
  \]
 
