@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo pacman -Syyu nvim alacritty mpv zsh tmux
+sudo pacman -Syyu neovim alacritty mpv zsh tmux rustup nodejs npm python-pip
