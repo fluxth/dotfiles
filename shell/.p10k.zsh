@@ -1528,10 +1528,11 @@
   }
 
   function prompt_arch() {
-    if [ "$ENV_ARCH" = "arm64" ]; then
-        local color=245
-    else
-        local color=166
+    local color=245
+    if [[ "$ENV_UNAME" == "Darwin" ]]; then
+      if [[ "$ENV_ARCH" == "x86_64" ]]; then
+          local color=166
+      fi
     fi
 
     p10k segment -t "%F{240}|%F{$color} $ENV_ARCH"
