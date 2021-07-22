@@ -102,7 +102,13 @@ export GPG_TTY=$(tty)
 # Alieses
 
 # Platform dependent configurations
-source "$XDG_CONFIG_HOME/zsh/macos.zsh"
+export ENV_UNAME=$(uname)
+export ENV_ARCH=$(uname -m)
+if [[ "$ENV_UNAME" == "Darwin" ]]; then
+    source "$XDG_CONFIG_HOME/zsh/macos.zsh"
+elif [[ "$ENV_UNAME" == "Linux" ]]; then
+    source "$XDG_CONFIG_HOME/zsh/linux.zsh"
+fi
 
 # Load powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
