@@ -1,3 +1,5 @@
+export GPG_TTY=$(tty)
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -94,7 +96,6 @@ export LANG=en_US.UTF-8
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
 export MANPAGER="nvim -c 'set ft=man' -"
-export GPG_TTY=$(tty)
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
