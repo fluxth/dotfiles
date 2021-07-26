@@ -7,7 +7,6 @@ update: platform
 	stow bin --ignore=.DS_Store
 	stow editor --ignore=.DS_Store
 	stow gui --ignore=.DS_Store
-	stow media --ignore=.DS_Store
 	stow personal --ignore=.DS_Store
 	stow shell --ignore=.DS_Store
 
@@ -16,7 +15,6 @@ clean: platform .packages.lock
 	stow -D bin --ignore=.DS_Store
 	stow -D editor --ignore=.DS_Store
 	stow -D gui --ignore=.DS_Store
-	stow -D media --ignore=.DS_Store
 	stow -D personal --ignore=.DS_Store
 	stow -D shell --ignore=.DS_Store
 
