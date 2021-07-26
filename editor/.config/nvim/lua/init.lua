@@ -1,2 +1,4 @@
-require('opts')
 require('plugins')
+
+require('opts')
+require('binds')
