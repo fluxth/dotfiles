@@ -7,6 +7,7 @@ colorscheme gruvbox
 highlight Normal guibg=none
 
 hi! link Blamer GruvboxBg2
+hi! link GitSignsChange GruvboxOrangeSign
 hi! link CocErrorSign GruvboxRedBold
 hi! link CocWarningSign GruvboxOrange
 hi! link CocInfoSign GruvboxBlue
