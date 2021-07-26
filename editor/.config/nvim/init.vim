@@ -2,6 +2,8 @@ source ~/.config/nvim/sets.vim
 source ~/.config/nvim/remaps.vim 
 source ~/.config/nvim/plugins.vim 
 
+lua require('init')
+
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 highlight Normal guibg=none
