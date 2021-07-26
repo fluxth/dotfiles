@@ -28,7 +28,7 @@ set splitbelow
 
 filetype plugin indent on
 set autoindent
-set timeoutlen=500 " http://stackoverflow.com/questions/2158516/delay-before-o-opens-a-new-line
+set timeoutlen=1000
 set encoding=utf-8
 set scrolloff=4
 set hidden
