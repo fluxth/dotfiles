@@ -35,6 +35,7 @@ nnoremap <C-l> :tabn<CR>
 " split panes
 nnoremap <leader>sh :sp<CR>
 nnoremap <leader>sv :vsp<CR>
+nnoremap <leader>sd <C-w><C-o>
 
 " new tab
 nnoremap <leader>t :tabnew<CR>
