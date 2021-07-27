@@ -30,23 +30,12 @@ map('n', '<leader>ff', ':lua require("telescope.builtin").find_files()<cr>', opt
 map('n', '<leader>fs', ':lua require("telescope.builtin").grep_string({ search = vim.fn.input("Grep For > ")})<cr>', options)
 map('n', '<leader>fw', ':lua require("telescope.builtin").grep_string { search = vim.fn.expand("<cword>") }<cr>', options)
 map('n', '<leader>fb', ':lua require("telescope.builtin").buffers()<cr>', options)
-map('n', '\\\\', ':lua require("telescope.builtin").buffers()<cr>', options)
+map('n', [[\\]], ':lua require("telescope.builtin").buffers()<cr>', options)
 map('n', '<leader>fh', ':lua require("telescope.builtin").help_tags()<cr>', options)
 map('n', '<leader>fe', ':lua require("telescope.builtin").file_browser()<cr>', options)
 
 -- custom modes
-map('n', '<leader>fd', ':lua require("plugins.telescope").search_dotfiles()<cr>', options)
+map('n', '<leader>fd', ':lua require("fluxth.telescope").search_dotfiles()<cr>', options)
 
 -- git related binds
 map('n', '<leader>gb', ':lua require("telescope.builtin").git_branches()<cr>', options)
-
--- export custom module
-local M = {}
-M.search_dotfiles = function()
-    require("telescope.builtin").git_files({
-        prompt_title = "dotfiles",
-        cwd = "$HOME/dotfiles",
-    })
-end
-
-return M
