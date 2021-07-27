@@ -43,7 +43,7 @@ opt.splitbelow = true
 opt.signcolumn = 'yes'
 
 opt.undofile = true
-opt.undodir = os.getenv('HOME') .. '/.local/share/nvim/undodir'
+opt.undodir =  vim.fn.stdpath('data') .. '/undodir'
 
 opt.mouse = 'nvi'
 

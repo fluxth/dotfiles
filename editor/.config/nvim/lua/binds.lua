@@ -22,7 +22,7 @@ map('n', '<leader>p', '<c-w>p', { noremap = true })
 map('n', '<leader>=', '<c-w>=', { noremap = true })
 
 -- escape from terminal insert mode
-map('t', '<leader>\\', '<c-\\><c-n>', { noremap = true })
+map('t', [[<leader>\]], [[<c-\><c-n>']], { noremap = true })
 
 -- close buffer
 map('n', '<leader>d', ':bd<cr>', { noremap = true, silent = true })
@@ -64,6 +64,7 @@ map('v', '>', '>gv', { noremap = true, silent = true })
 
 -- disable ex mode
 map('n', 'Q', '<nop>', { noremap = true, silent = true })
+map('n', 'q:', '<nop>', { noremap = true, silent = true })
 
 -- qflist remaps
 map('n', '<c-left>', ':lprev<cr>zz', { noremap = true, silent = true })
