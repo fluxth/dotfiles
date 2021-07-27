@@ -47,9 +47,13 @@ local packer = require('packer').startup(function(use)
 end)
 
 -- source plugin settings
+require('plugins.airline')
 require('plugins.telescope')
 require('plugins.treesitter')
 require('plugins.fugitive')
 require('plugins.gitsigns')
+
+-- additional settings
+vim.g.WebDevIconsOS = 'Linux'  -- set unix icon to a penguin :D
 
 return packer
