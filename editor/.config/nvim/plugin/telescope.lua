@@ -37,7 +37,7 @@ map('n', '<leader>fe', ':lua require("telescope.builtin").file_browser()<cr>', o
 -- custom modes
 map('n', '<leader>fd', ':lua require("plugins.telescope").search_dotfiles()<cr>', options)
 
--- git related remaps
+-- git related binds
 map('n', '<leader>gb', ':lua require("telescope.builtin").git_branches()<cr>', options)
 
 -- export custom module

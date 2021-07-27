@@ -53,12 +53,5 @@ require('packer').startup(function(use)
     use 'edkolev/tmuxline.vim'
 end)
 
--- source plugin settings
-require('plugins.airline')
-require('plugins.telescope')
-require('plugins.treesitter')
-require('plugins.fugitive')
-require('plugins.gitsigns')
-
 -- additional settings
 vim.g.WebDevIconsOS = 'Linux'  -- set unix icon to a penguin :D
