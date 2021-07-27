@@ -62,6 +62,9 @@ map('n', '<leader>`', '"*', { noremap = true })
 map('v', '<', '<gv', { noremap = true, silent = true })
 map('v', '>', '>gv', { noremap = true, silent = true })
 
+-- disable ex mode
+map('n', 'Q', '<nop>', { noremap = true, silent = true })
+
 -- qflist remaps
 map('n', '<c-left>', ':lprev<cr>zz', { noremap = true })
 map('n', '<c-right>', ':lnext<cr>zz', { noremap = true })
