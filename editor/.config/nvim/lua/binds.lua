@@ -8,10 +8,10 @@ vim.g.mapleader = ' '
 map('i', 'jk', '<esc>', { noremap = true, silent = true })
 
 -- file manipulation
-map('n', '<leader>q', ':q<cr>', { noremap = true })
-map('n', '<leader>Q', ':q!<cr>', { noremap = true })
-map('n', '<leader>w', ':w<cr>', { noremap = true })
-map('n', '<leader>x', ':wq<cr>', { noremap = true })
+map('n', '<leader>q', ':q<cr>', { noremap = true, silent = true })
+map('n', '<leader>Q', ':q!<cr>', { noremap = true, silent = true })
+map('n', '<leader>w', ':w<cr>', { noremap = true, silent = true })
+map('n', '<leader>x', ':wq<cr>', { noremap = true, silent = true })
 
 -- pane navigation
 map('n', '<leader>h', '<c-w>h', { noremap = true })
@@ -25,31 +25,31 @@ map('n', '<leader>=', '<c-w>=', { noremap = true })
 map('t', '<leader>\\', '<c-\\><c-n>', { noremap = true })
 
 -- close buffer
-map('n', '<leader>d', ':bd<cr>', { noremap = true })
-map('n', '<leader>D', ':bd!<cr>', { noremap = true })
+map('n', '<leader>d', ':bd<cr>', { noremap = true, silent = true })
+map('n', '<leader>D', ':bd!<cr>', { noremap = true, silent = true })
 
 -- buffer navigation
 map('n', '<leader><leader>', '<c-^>', { noremap = true, silent = true })
-map('n', '<c-k>', ':bp<cr>', { noremap = true })
-map('n', '<c-j>', ':bn<cr>', { noremap = true })
+map('n', '<c-k>', ':bp<cr>', { noremap = true, silent = true })
+map('n', '<c-j>', ':bn<cr>', { noremap = true, silent = true })
 
 -- tab navigation
-map('n', '<c-h>', ':tabp<cr>', { noremap = true })
-map('n', '<c-l>', ':tabn<cr>', { noremap = true })
+map('n', '<c-h>', ':tabp<cr>', { noremap = true, silent = true })
+map('n', '<c-l>', ':tabn<cr>', { noremap = true, silent = true })
 
 -- split panes
-map('n', '<leader>sh', ':sp<cr>', { noremap = true })
-map('n', '<leader>sv', ':vsp<cr>', { noremap = true })
+map('n', '<leader>sh', ':sp<cr>', { noremap = true, silent = true })
+map('n', '<leader>sv', ':vsp<cr>', { noremap = true, silent = true })
 map('n', '<leader>sd', '<c-w><c-o>', { noremap = true })
 
 -- new tab
-map('n', '<leader>t', ':tabnew<cr>', { noremap = true })
+map('n', '<leader>t', ':tabnew<cr>', { noremap = true, silent = true })
 
 -- diff remaps
-map('n', '<leader>sp', ':diffput<cr>', { noremap = true })
-map('v', '<leader>sp', ':diffput<cr>', { noremap = true })
-map('n', '<leader>sg', ':diffget<cr>', { noremap = true })
-map('v', '<leader>sg', ':diffget<cr>', { noremap = true })
+map('n', '<leader>sp', ':diffput<cr>', { noremap = true, silent = true })
+map('v', '<leader>sp', ':diffput<cr>', { noremap = true, silent = true })
+map('n', '<leader>sg', ':diffget<cr>', { noremap = true, silent = true })
+map('v', '<leader>sg', ':diffget<cr>', { noremap = true, silent = true })
 
 -- too much thinking for ^ and $
 map('n', '<leader>[', '^', { noremap = true })
@@ -66,7 +66,7 @@ map('v', '>', '>gv', { noremap = true, silent = true })
 map('n', 'Q', '<nop>', { noremap = true, silent = true })
 
 -- qflist remaps
-map('n', '<c-left>', ':lprev<cr>zz', { noremap = true })
-map('n', '<c-right>', ':lnext<cr>zz', { noremap = true })
-map('n', '<c-up>', ':cprev<cr>zz', { noremap = true })
-map('n', '<c-down>', ':cnext<cr>zz', { noremap = true })
+map('n', '<c-left>', ':lprev<cr>zz', { noremap = true, silent = true })
+map('n', '<c-right>', ':lnext<cr>zz', { noremap = true, silent = true })
+map('n', '<c-up>', ':cprev<cr>zz', { noremap = true, silent = true })
+map('n', '<c-down>', ':cnext<cr>zz', { noremap = true, silent = true })
