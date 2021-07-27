@@ -49,5 +49,7 @@ end)
 -- source plugin settings
 require('plugins.telescope')
 require('plugins.treesitter')
+require('plugins.fugitive')
+require('plugins.gitsigns')
 
 return packer
