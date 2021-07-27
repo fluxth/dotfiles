@@ -7,3 +7,5 @@ require('plugins')
 
 -- set appearance
 require('appearance')
+
+vim.cmd('source ~/.config/nvim/to_port.vim')

@@ -1,8 +1,3 @@
-lua require('init')
-
-source ~/.config/nvim/remaps.vim 
-source ~/.config/nvim/plugins.vim 
-
 " Follow Rust code style rules
 autocmd Filetype rust set colorcolumn=100
 autocmd BufRead Cargo.toml call crates#toggle()
