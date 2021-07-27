@@ -14,7 +14,6 @@ rustup toolchain install stable
 cargo install exa
 
 # Install neovim prerequisites
-git clone https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 pip3 install neovim
 cd ~/.config/coc/extensions && npm i # TODO: do :CocInstall for each coc extensions
-nvim +PlugInstall
+nvim +PackerInstall
