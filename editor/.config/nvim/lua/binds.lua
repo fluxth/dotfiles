@@ -19,13 +19,13 @@ map('n', '<leader>j', '<c-w>j', { noremap = true })
 map('n', '<leader>k', '<c-w>k', { noremap = true })
 map('n', '<leader>l', '<c-w>l', { noremap = true })
 map('n', '<leader>p', '<c-w>p', { noremap = true })
-map('n', '<leader>=', '<c-w>=', { noremap = true }) 
+map('n', '<leader>=', '<c-w>=', { noremap = true })
 
 -- escape from terminal insert mode
 map('t', '<leader>\\', '<c-\\><c-n>', { noremap = true })
 
 -- close buffer
-map('n', '<leader>d', ':bdcr>', { noremap = true })
+map('n', '<leader>d', ':bd<cr>', { noremap = true })
 map('n', '<leader>D', ':bd!<cr>', { noremap = true })
 
 -- buffer navigation
