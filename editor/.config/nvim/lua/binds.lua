@@ -58,6 +58,10 @@ map('n', '<leader>]', '$', { noremap = true })
 -- the system clipboard (tm)
 map('n', '<leader>`', '"*', { noremap = true })
 
+-- better indenting
+map('v', '<', '<gv', { noremap = true, silent = true })
+map('v', '>', '>gv', { noremap = true, silent = true })
+
 -- qflist remaps
 map('n', '<c-left>', ':lprev<cr>zz', { noremap = true })
 map('n', '<c-right>', ':lnext<cr>zz', { noremap = true })
