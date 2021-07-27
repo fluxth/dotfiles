@@ -1,53 +1,63 @@
-vim.o.filetype = 'on'
-vim.o.syntax = 'on'
+local opt = vim.opt
 
-vim.o.exrc = true
-vim.o.compatible = false
-vim.o.secure = true
+opt.filetype = 'on'
+opt.syntax = 'on'
 
-vim.o.hidden = true
-vim.o.showmatch = false
-vim.o.showmode = false
-vim.o.errorbells = false
-vim.o.tabstop = 4
-vim.o.softtabstop = 4
-vim.o.shiftwidth = 4
-vim.o.expandtab = true
-vim.o.smartindent = true
-vim.o.number = true
-vim.o.relativenumber = true
-vim.o.smartcase = true
+opt.exrc = true
+opt.compatible = false
+opt.secure = true
 
-vim.o.swapfile = false
-vim.o.backup = false
+opt.hidden = true
+opt.showmatch = false
+opt.showmode = false
+opt.errorbells = false
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
+opt.smartindent = true
+opt.number = true
+opt.relativenumber = true
+opt.smartcase = true
 
-vim.o.termguicolors = true
-vim.o.shortmess = vim.o.shortmess .. 'c'
+opt.swapfile = false
+opt.backup = false
 
-vim.o.autoindent = true
-vim.o.encoding = 'utf-8'
-vim.o.scrolloff = 4
-vim.o.joinspaces = false
--- vim.o.nowrap = true
+opt.termguicolors = true
+opt.shortmess = vim.opt.shortmess + 'c'
+
+opt.autoindent = true
+opt.encoding = 'utf-8'
+opt.scrolloff = 4
+opt.joinspaces = false
+-- vim.opt.nowrap = true
 
 -- Searches
-vim.o.hlsearch = false
-vim.o.incsearch = true
+opt.hlsearch = false
+opt.incsearch = true
 
 -- Sane splits
-vim.o.splitright = true
-vim.o.splitbelow = true
+opt.splitright = true
+opt.splitbelow = true
 
-vim.o.signcolumn = 'yes'
+opt.signcolumn = 'yes'
 
-vim.o.undofile = true
-vim.o.undodir = os.getenv('HOME') .. '/.local/share/nvim/undodir'
+opt.undofile = true
+opt.undodir = os.getenv('HOME') .. '/.local/share/nvim/undodir'
 
-vim.o.mouse = 'nvi'
+opt.mouse = 'nvi'
 
-vim.o.timeoutlen = 1000
-vim.o.updatetime = 300
+opt.timeoutlen = 1000
+opt.updatetime = 300
 
-vim.o.colorcolumn = '80'
+opt.colorcolumn = '80'
 
-vim.o.listchars = 'nbsp:¬,extends:»,precedes:«,trail:•'
+opt.showbreak = '↪ '
+opt.list = true
+opt.listchars = {
+    nbsp        = '¬',
+    extends     = '»',
+    precedes    = '«',
+    trail       = '·',
+    tab         = '→ ',
+}
