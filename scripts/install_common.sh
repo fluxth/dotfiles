@@ -5,3 +5,4 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 # Reserve directories before stow symlinks it!
 mkdir -p ~/.config/coc/extensions
+mkdir -p ~/.local/bin
