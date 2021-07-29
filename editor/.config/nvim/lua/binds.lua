@@ -22,7 +22,7 @@ map('n', '<leader>p', '<c-w>p', { noremap = true })
 map('n', '<leader>=', '<c-w>=', { noremap = true })
 
 -- escape from terminal insert mode
-map('t', [[<leader>\]], [[<c-\><c-n>']], { noremap = true })
+map('t', [[<leader>\]], [[<c-\><c-n>]], { noremap = true })
 
 -- close buffer
 map('n', '<leader>d', ':bd<cr>', { noremap = true, silent = true })
