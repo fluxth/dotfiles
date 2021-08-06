@@ -1,22 +1,34 @@
+STOWFLAGS = --ignore=.DS_Store --ignore='Google Drive'
+
 .PHONY: install update clean platform
 
 install: platform .packages.lock update
 
 update: platform
 	$(info Symlinking dotfiles...)
-	stow bin --ignore=.DS_Store
-	stow editor --ignore=.DS_Store
-	stow gui --ignore=.DS_Store
-	stow personal --ignore=.DS_Store
-	stow shell --ignore=.DS_Store
+	$(info Linking bin)
+	@stow bin $(STOWFLAGS)
+	$(info Linking editor)
+	@stow editor $(STOWFLAGS)
+	$(info Linking gui)
+	@stow gui $(STOWFLAGS)
+	$(info Linking personal)
+	@stow personal $(STOWFLAGS)
+	$(info Linking shell)
+	@stow shell $(STOWFLAGS)
 
 clean: platform .packages.lock
 	$(info Removing symlinks to dotfiles...)
-	stow -D bin --ignore=.DS_Store
-	stow -D editor --ignore=.DS_Store
-	stow -D gui --ignore=.DS_Store
-	stow -D personal --ignore=.DS_Store
-	stow -D shell --ignore=.DS_Store
+	$(info Unlinking bin)
+	@stow -D bin $(STOWFLAGS)
+	$(info Unlinking editor)
+	@stow -D editor $(STOWFLAGS)
+	$(info Unlinking gui)
+	@stow -D gui $(STOWFLAGS)
+	$(info Unlinking personal)
+	@stow -D personal $(STOWFLAGS)
+	$(info Unlinking shell)
+	@stow -D shell $(STOWFLAGS)
 
 platform:
 ifeq ($(OS),Windows_NT)
