@@ -11,3 +11,6 @@ require('gitsigns').setup {
         ['n <leader>ghb'] = '<cmd>lua require"gitsigns".blame_line(true)<CR>',
     }
 }
+
+local map = vim.api.nvim_set_keymap
+map('n', '<leader>sgg', ':Gitsigns toggle_signs<cr>', { noremap = true, silent = true })

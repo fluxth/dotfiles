@@ -64,3 +64,5 @@ nmap <leader>av <Plug>(coc-format-selected)
 let g:coc_filetype_map = {
   \ 'htmldjango': 'html',
   \ }
+
+nnoremap <leader>sc :call CocAction('diagnosticToggle')<cr>
