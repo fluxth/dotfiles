@@ -8,7 +8,7 @@ picom &
 xsetroot -cursor_name left_ptr
 setxkbmap -option caps:escape
 
-bspc monitor -d dev www fm mus vid sys a b c ext
+bspc monitor -d term www edit fm av sys a b c ext
 
 bspc config border_width        2
 bspc config window_gap          12
@@ -17,20 +17,27 @@ bspc config split_ratio         0.52
 bspc config borderless_monocle      true
 bspc config gapless_monocle         true
 bspc config focus_follows_pointer   true
-bspc config focused_border_color    '#523804'
+bspc config focused_border_color    '#009191'
 bspc config normal_border_color     '#1d2021'
 
-bspc rule -a Chromium   desktop=www  follow=on
-bspc rule -a brave      desktop=www  follow=on
-bspc rule -a firefox    desktop=www  follow=on
+# Bind browsers to www workspace
+bspc rule -a Chromium       desktop=www  follow=on
+bspc rule -a Brave-browser  desktop=www  follow=on
+bspc rule -a firefox        desktop=www  follow=on
 
-bspc rule -a dolphin    desktop=fm   follow=on
-bspc rule -a pcmanfm    desktop=fm   follow=on
+# Bind file-managers to fm workspace
+bspc rule -a dolphin        desktop=fm   follow=on
+bspc rule -a Thunar         desktop=fm   follow=on
+bspc rule -a Pcmanfm        desktop=fm   follow=on
 
-bspc rule -a keepassxc  desktop=sys  follow=on
+# Bind editors to edit workspace
+bspc rule -a Code           desktop=edit follow=on
 
-bspc rule -a mpv        desktop=vid  follow=on state=floating
-bspc rule -a mplayer2   desktop=vid  follow=on state=floating
+bspc rule -a KeePassXC      desktop=sys  follow=on
 
-bspc rule -a polybar    border=off manage=off
-bspc rule -a Screenkey  manage=off
+bspc rule -a mpv            desktop=av   follow=on state=floating
+bspc rule -a mplayer2       desktop=av   follow=on state=floating
+
+# Window manager exceptions
+bspc rule -a polybar        border=off manage=off
+bspc rule -a Screenkey      manage=off
