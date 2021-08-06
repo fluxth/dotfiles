@@ -71,3 +71,19 @@ map('n', '<c-left>', ':lprev<cr>zz', { noremap = true, silent = true })
 map('n', '<c-right>', ':lnext<cr>zz', { noremap = true, silent = true })
 map('n', '<c-up>', ':cprev<cr>zz', { noremap = true, silent = true })
 map('n', '<c-down>', ':cnext<cr>zz', { noremap = true, silent = true })
+
+-- C changes until eol, D deletes until eol, why doesnt Y do the same?!
+map('n', 'Y', 'y$', { noremap = true, silent = true })
+
+-- just dont get the cursor all over the place
+map('n', 'n', 'nzzzv', { noremap = true, silent = true })
+map('n', 'N', 'Nzzzv', { noremap = true, silent = true })
+map('n', 'J', 'mzJ`z', { noremap = true, silent = true })
+
+-- undo breakpoints
+map('i', '.', '.<c-g>u', { noremap = true, silent = true })
+map('i', ',', ',<c-g>u', { noremap = true, silent = true })
+
+-- moving texts
+map('v', 'J', ":m '>+1<cr>gv=gv", { noremap = true, silent = true })
+map('v', 'K', ":m '<-2<cr>gv=gv", { noremap = true, silent = true })
