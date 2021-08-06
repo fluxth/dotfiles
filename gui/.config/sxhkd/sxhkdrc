@@ -16,7 +16,7 @@ super + b
 
 # file explorer
 super + e
-	dolphin
+	thunar
 
 # make sxhkd reload its configuration files:
 super + Escape
