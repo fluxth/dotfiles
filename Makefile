@@ -39,17 +39,17 @@ endif
 UNAME_S := $(shell uname -s)
 
 .packages.lock:
-	$(info Installing packages...)
-	@./scripts/install_common.sh
+	$(info Running pre-install scripts...)
+	@./scripts/preinstall_common.sh
 
 ifeq ($(UNAME_S),Linux)
 	$(info OS Detected: Linux)
-	@pacman -V > /dev/null && cd scripts && ./install_archlinux.sh
+	@pacman -V > /dev/null && cd scripts && ./preinstall_archlinux.sh
 endif
 ifeq ($(UNAME_S),Darwin)
 	$(info OS Detected: macOS)
 	@brew -v > /dev/null || (/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)")
-	@cd scripts && ./install_macos.sh
+	@cd scripts && ./preinstall_macos.sh
 endif
 
 	@./scripts/postinstall_common.sh
