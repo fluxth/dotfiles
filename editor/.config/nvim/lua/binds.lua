@@ -8,10 +8,12 @@ vim.g.mapleader = ' '
 map('i', 'jk', '<esc>', { noremap = true, silent = true })
 
 -- file manipulation
-map('n', '<leader>q', ':q<cr>', { noremap = true, silent = true })
+map('n', '<leader>qq', ':q<cr>', { noremap = true, silent = true })
+map('n', '<leader>qa', ':qa<cr>', { noremap = true, silent = true })
 map('n', '<leader>Q', ':q!<cr>', { noremap = true, silent = true })
 map('n', '<leader>w', ':w<cr>', { noremap = true, silent = true })
 map('n', '<leader>x', ':wq<cr>', { noremap = true, silent = true })
+map('n', '<leader>qw', ':wq<cr>', { noremap = true, silent = true })
 
 -- pane navigation
 map('n', '<leader>h', '<c-w>h', { noremap = true })
