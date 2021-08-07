@@ -11,11 +11,7 @@ DOTFILE_DIRS=(
 STOW_EXCLUDE=(
     .DS_Store
     .gitignore
-)
-
-CLEAN_DIRS=(
-    "~/.config/karabiner/"
-    "~/.config/iterm2/"
+    .git
 )
 
 show_help(){
@@ -114,6 +110,17 @@ filter_os(){
     fi
 }
 
+file_is_in_symlink(){
+    local filename=$1
+    while [[ ! "$filename" == "/" ]]; do
+        filename=$(dirname $filename)
+        if [[ -L "$filename" ]]; then
+            return 0
+        fi
+    done
+    return 1
+}
+
 ## Hooks
 
 post_install(){
@@ -187,9 +194,33 @@ unlink(){
 }
 
 clean(){
-    echo "Warning: \"clean\" will destructively delete the following files/directories:"
-    for dir in "${CLEAN_DIRS[@]}"; do
-        echo "    $dir"
+    set -e
+
+    local find_exclude=""
+    for item in "${STOW_EXCLUDE[@]}"; do
+        find_exclude+="-not -name $item "
+    done
+
+    local clean_files=()
+    for dir in "${DOTFILE_DIRS[@]}"; do
+        cd $dir
+        for file in $(find . -type f $find_exclude); do
+            local filename="$HOME$(echo $file | sed 's/^.//')"
+            if [[ -f "$filename" ]] && [[ ! -L "$filename" ]] && ! file_is_in_symlink "$filename"; then
+                clean_files+=("$filename")
+            fi
+        done
+        cd ..
+    done
+
+    if [[ "${#clean_files[@]}" == "0" ]]; then
+        echo "Your XDG directories are already clean."
+        exit 0
+    fi
+
+    echo "Warning: \"clean\" will destructively delete the following files:"
+    for file in "${clean_files[@]}"; do
+        echo "    $file"
     done
 
     echo
@@ -197,16 +228,16 @@ clean(){
     echo
 
     if [[ $REPLY =~ ^[Yy]$ ]]; then
-        set -e
-        for dir in "${CLEAN_DIRS[@]}"; do
-            echo "Cleaning \"$dir\"..."
-            rm -rf "$dir"
+        for file in "${clean_files[@]}"; do
+            echo "Cleaning \"$file\"..."
+            rm -f "$file"
         done
-        set +e
     else
         echo "Aborting."
         exit 1
     fi
+
+    set +e
 }
 
 # check os
