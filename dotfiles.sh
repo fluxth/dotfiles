@@ -187,7 +187,6 @@ unlink(){
     echo "Removing symlinks to dotfiles..."
     for dir in "${DOTFILE_DIRS[@]}"; do
         echo "- Unlinking \"$dir\""
-        echo "stow -D $STOWFLAGS $dir"
         stow -D $STOWFLAGS $dir
     done
     set +e
