@@ -38,7 +38,7 @@ MACHINE_OS="Unknown"
 DOTFILE_ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 exclude_dir_register(){
-    vals=$1
+    local vals=$1
     IFS=',' read -ra ARR <<< "$vals"
 
     for val in "${ARR[@]}"; do
@@ -51,7 +51,7 @@ exclude_dir_register(){
     done
 
     # Strip gaps that happens when removing element from an array
-    temp_arr=()
+    local temp_arr=()
     for i in "${!DOTFILE_DIRS[@]}"; do
         temp_arr+=(${DOTFILE_DIRS[i]})
     done
@@ -80,7 +80,7 @@ check_command_exit(){
 }
 
 detect_os(){
-    uname_s="$(uname -s)"
+    local uname_s="$(uname -s)"
     case "$uname_s" in
         Darwin*) MACHINE_OS="macOS" ;;
         Linux*)
