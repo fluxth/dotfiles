@@ -1,3 +1,3 @@
 #!/bin/bash -e
 
-yay --noconfirm -Syu zsh
+yay --noconfirm --needed -Syu zsh

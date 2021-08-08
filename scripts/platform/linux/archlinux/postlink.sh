@@ -3,6 +3,7 @@
 PACKAGES=(
     base-devel
     neovim
+    xclip
     alacritty
     mpv
     tmux
@@ -13,4 +14,4 @@ PACKAGES=(
     ttf-meslo-nerd-font-powerlevel10k
 )
 
-yay --noconfirm -S ${PACKAGES[@]}
+yay --noconfirm --needed -S ${PACKAGES[@]}

@@ -11,4 +11,4 @@ PACKAGES=(
     xorg-xsetroot
 )
 
-yay --noconfirm -S ${PACKAGES[@]}
+yay --needed --noconfirm -S ${PACKAGES[@]}
