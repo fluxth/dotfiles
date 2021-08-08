@@ -17,6 +17,14 @@ ENSURE_DIR_LINKS=(
     ~/.config/zsh
 )
 
+DIR_LINK_ERROR=0
 for dir in "${ENSURE_DIR_LINKS[@]}"; do
-    [ ! -d $dir ] || echo "Error: Directory \"$dir\" must be empty."
+    if [[ -d $dir ]]; then
+        echo "Error: Directory \"$dir\" must be empty."
+        DIR_LINK_ERROR=1
+    fi
 done
+
+if [[ ! $DIR_LINK_ERROR == "0" ]]; then
+    exit 1
+fi

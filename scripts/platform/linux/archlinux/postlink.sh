@@ -13,4 +13,4 @@ PACKAGES=(
     ttf-meslo-nerd-font-powerlevel10k
 )
 
-yay --noconfirm -Syu ${PACKAGES[@]}
+yay --noconfirm -S ${PACKAGES[@]}

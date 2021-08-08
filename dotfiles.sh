@@ -87,7 +87,9 @@ detect_os(){
             MACHINE_OS="Linux"
 
             # Detect distro
-            if ! check_command pacman; then
+            if check_command pacman; then
+                check_command_exit "yay"
+            else
                 echo "Warning: You are using Linux, but your distro is not supported."
                 echo "Script will continue, but it will likely fail."
                 echo
@@ -135,10 +137,14 @@ post_install(){
         $DOTFILE_ROOT_DIR/scripts/platform/linux/postlink.sh
     fi
 
+    $DOTFILE_ROOT_DIR/scripts/postlink_cleanup.sh
+
     set +e
 }
 
 post_full_install(){
+    echo "Running GUI post-install scripts..."
+
     if [[ $MACHINE_OS == "Linux" ]]; then
         $DOTFILE_ROOT_DIR/scripts/platform/linux/gui_postlink.sh || exit 1
     fi
@@ -158,12 +164,14 @@ install(){
         $DOTFILE_ROOT_DIR/scripts/platform/linux/prelink.sh
     fi
 
+    $DOTFILE_ROOT_DIR/scripts/prelink_cleanup.sh
+
     set +e
 }
 
 full_install(){
     if [[ $MACHINE_OS == "Linux" ]]; then
-        echo "Installing GUI packages..."
+        echo "Installing GUI prerequisites..."
         $DOTFILE_ROOT_DIR/scripts/platform/linux/gui_prelink.sh || exit 1
     else
         echo "GUI packages will not install as it is not supported on your platform."
