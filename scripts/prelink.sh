@@ -2,8 +2,8 @@
 
 # Ensure file symlinks
 ENSURE_FILE_LINKS=(
-    ~/.config/coc/extensions
-    ~/.local/bin
+    ~/.config/coc/extensions/
+    ~/.local/bin/
 )
 
 for dir in "${ENSURE_FILE_LINKS[@]}"; do
@@ -14,6 +14,7 @@ done
 ENSURE_DIR_LINKS=(
     ~/.config/iterm2
     ~/.config/karabiner
+    ~/.config/zsh
 )
 
 for dir in "${ENSURE_DIR_LINKS[@]}"; do
