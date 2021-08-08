@@ -87,7 +87,7 @@ detect_os(){
             MACHINE_OS="Linux"
 
             # Detect distro
-            if check_command pacman; then
+            if check_command "pacman"; then
                 check_command_exit "yay"
             else
                 echo "Warning: You are using Linux, but your distro is not supported."
@@ -100,14 +100,16 @@ detect_os(){
 
 filter_os(){
     if [[ $MACHINE_OS == "Unknown" ]]; then
-        echo "Error: fluxth's dotfiles is not supported on this platform."
-        echo "Currently supported platforms:"
-        echo "  - macOS"
-        echo "  - Linux"
-        echo "    - Arch Linux (Full Support)"
-        echo "    - Other Distros (Partial Support)"
-        echo
-        echo "If you think this is an error, please send a pull request on GitHub."
+        cat << EOF
+Error: fluxth's dotfiles is not supported on this platform.
+Currently supported platforms:
+  - macOS
+  - Linux
+    - Arch Linux (Full Support)
+    - Other Distros (Partial Support)
+
+If you think this is an error, please send a pull request on GitHub.
+EOF
         exit 1
     fi
 }
@@ -127,7 +129,6 @@ file_is_in_symlink(){
 
 post_install(){
     echo "Running post-install scripts..."
-    set -e
 
     $DOTFILE_ROOT_DIR/scripts/postlink.sh
 
@@ -138,8 +139,6 @@ post_install(){
     fi
 
     $DOTFILE_ROOT_DIR/scripts/postlink_cleanup.sh
-
-    set +e
 }
 
 post_full_install(){
@@ -152,7 +151,6 @@ post_full_install(){
 
 install(){
     echo "Installing required packages..."
-    set -e
 
     $DOTFILE_ROOT_DIR/scripts/prelink.sh
 
@@ -165,8 +163,6 @@ install(){
     fi
 
     $DOTFILE_ROOT_DIR/scripts/prelink_cleanup.sh
-
-    set +e
 }
 
 full_install(){
@@ -181,28 +177,22 @@ full_install(){
 ## Actions
 
 link(){
-    set -e
     echo "Symlinking dotfiles..."
     for dir in "${DOTFILE_DIRS[@]}"; do
         echo "+ Linking \"$dir\""
         stow $STOWFLAGS $dir
     done
-    set +e
 }
 
 unlink(){
-    set -e
     echo "Removing symlinks to dotfiles..."
     for dir in "${DOTFILE_DIRS[@]}"; do
         echo "- Unlinking \"$dir\""
         stow -D $STOWFLAGS $dir
     done
-    set +e
 }
 
 clean(){
-    set -e
-
     local find_exclude=""
     for item in "${STOW_EXCLUDE[@]}"; do
         find_exclude+="-not -name $item "
@@ -243,8 +233,6 @@ clean(){
         echo "Aborting."
         exit 1
     fi
-
-    set +e
 }
 
 # check os
@@ -288,6 +276,8 @@ for opt do
         ;;
     esac
 done
+
+set -e
 build_stowflags
 
 # actually running actions
@@ -302,6 +292,7 @@ for opt do
             install 
             link 
             post_install
+            echo "Install finished successfully!"
         ;;
         full-install) 
             install
@@ -309,6 +300,7 @@ for opt do
             link
             post_install
             post_full_install
+            echo "Full-install finished successfully!"
         ;;
         link) link ;;
         unlink) unlink ;;
