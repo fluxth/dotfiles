@@ -1,3 +1,3 @@
 #!/bin/bash -e
 
-pacman -Syu --noconfirm zsh yay
+sudo pacman -Syu --noconfirm zsh yay

@@ -155,7 +155,7 @@ install(){
         $DOTFILE_ROOT_DIR/scripts/platform/macos/prelink.sh
     elif [[ $MACHINE_OS == "Linux" ]]; then
         echo "OS detected as GNU/Linux"
-        $DOTFILE_ROOT_DIR/scripts/platform/macos/prelink.sh
+        $DOTFILE_ROOT_DIR/scripts/platform/linux/prelink.sh
     fi
 
     set +e
