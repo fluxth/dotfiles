@@ -24,7 +24,7 @@ opt.swapfile = false
 opt.backup = false
 
 opt.termguicolors = true
-opt.shortmess = vim.opt.shortmess + 'c'
+opt.shortmess = opt.shortmess + 'c'
 
 opt.autoindent = true
 opt.encoding = 'utf-8'
