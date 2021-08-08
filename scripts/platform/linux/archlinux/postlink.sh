@@ -11,6 +11,7 @@ PACKAGES=(
     nodejs
     npm
     python-pip
+    youtube-dl
     ttf-meslo-nerd-font-powerlevel10k
 )
 

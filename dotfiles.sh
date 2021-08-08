@@ -14,6 +14,10 @@ STOW_EXCLUDE=(
     .git
 )
 
+EXTRA_CLEAN_ITEMS=(
+    "$HOME/.config/mpv/youtube-dl"
+)
+
 show_help(){
     cat <<EOF
 Usage: $0 [options] actions ...
@@ -208,6 +212,13 @@ clean(){
             fi
         done
         cd ..
+    done
+
+    # Process extra clean files
+    for item in "${EXTRA_CLEAN_ITEMS}"; do
+        if [[ -f "$item" ]]; then
+            clean_files+=("$item")
+        fi
     done
 
     if [[ "${#clean_files[@]}" == "0" ]]; then

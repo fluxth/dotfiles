@@ -8,6 +8,7 @@ PACKAGES=(
     tmux
     rustup-init
     node
+    youtube-dl
 )
 
 CASK_PACKAGES=(

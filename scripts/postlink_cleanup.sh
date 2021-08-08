@@ -4,6 +4,9 @@
 rustup toolchain install stable
 cargo install exa
 
+# Link youtube-dl into mpv directory
+ln -s $(which youtube-dl) ~/.config/mpv/youtube-dl
+
 # Install neovim prerequisites
 pip3 install neovim
 
