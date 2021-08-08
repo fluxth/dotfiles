@@ -31,7 +31,7 @@ font-3 = "Noto Sans Symbols2:size=10;1"
 
 modules-left = date bspwm xwindow
 modules-center =
-modules-right = pulseaudio eth cpu memory powermenu
+modules-right = pulseaudio xkeyboard eth cpu memory powermenu
 
 tray-position = right
 tray-padding = 2
@@ -63,6 +63,17 @@ label-urgent-underline = #9b0a20
 
 label-empty = " %name% "
 label-empty-foreground = #555555
+
+[module/xkeyboard]
+type = internal/xkeyboard
+
+; List of indicators to ignore
+blacklist-0 = num lock
+blacklist-1 = scroll lock
+format = <label-layout>
+format-prefix = "⌨ "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #009900
 
 [module/cpu]
 type = internal/cpu

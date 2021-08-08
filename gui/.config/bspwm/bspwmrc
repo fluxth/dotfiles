@@ -7,6 +7,7 @@ nitrogen --restore &
 picom &
 xsetroot -cursor_name left_ptr
 setxkbmap -option caps:escape
+setxkbmap -option grp:alt_shift_toggle us,th
 
 bspc monitor -d term www edit fm av sys a b c ext
 
