@@ -2,6 +2,14 @@
 vim.g.airline_powerline_fonts = 1
 vim.g.airline_theme = 'base16_vim'
 
+vim.g.airline_symbols = {
+    linenr = ' L:',
+    colnr = ' C:',
+    maxlinenr = '',
+    notexists = '[?]',
+    dirty = '[+]',
+}
+
 vim.g['airline#extensions#scrollbar#enabled'] = 0
 
 vim.g['airline#extensions#tabline#enabled'] = 0  -- disable tabline
