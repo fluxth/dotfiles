@@ -1,10 +1,3 @@
--- install packer if it is not present
-local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-
-if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-    vim.fn.execute('!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
-end
-
 -- initialize packer.nvim
 require('packer').startup(function(use)
     -- packer manages itself
@@ -23,7 +16,7 @@ require('packer').startup(function(use)
     use 'editorconfig/editorconfig-vim'
     use 'tpope/vim-fugitive'
     use 'APZelos/blamer.nvim'
-    use 'lewis6991/gitsigns.nvim'
+    use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }}
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'preservim/nerdcommenter'
 
@@ -32,11 +25,12 @@ require('packer').startup(function(use)
     use 'machakann/vim-highlightedyank'
     use 'mhinz/vim-crates'
 
-    -- fizzy finder
+    -- fuzzy finder
     use 'airblade/vim-rooter'
-    use 'nvim-lua/popup.nvim'
-    use 'nvim-lua/plenary.nvim'
-    use 'nvim-telescope/telescope.nvim'
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = {{ 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' }}
+    }
     use 'nvim-telescope/telescope-fzy-native.nvim'
 
     -- lsp
