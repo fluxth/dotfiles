@@ -267,7 +267,7 @@ ACTIONS=(
 action_count=0
 for opt do
     case "$opt" in
-        --help|-h) 
+        --help|-h)
             show_help
             exit 0
         ;;
@@ -299,13 +299,13 @@ fi
 
 for opt do
     case "$opt" in
-        install) 
-            install 
-            link 
+        install)
+            install
+            link
             post_install
             echo "Install finished successfully!"
         ;;
-        full-install) 
+        full-install)
             install
             full_install
             link
@@ -315,7 +315,7 @@ for opt do
         ;;
         link) link ;;
         unlink) unlink ;;
-        relink) 
+        relink)
             unlink
             link
         ;;
