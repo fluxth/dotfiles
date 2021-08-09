@@ -19,6 +19,7 @@ opt.smartindent = true
 opt.number = true
 opt.relativenumber = true
 opt.smartcase = true
+opt.ignorecase = true
 
 opt.swapfile = false
 opt.backup = false
