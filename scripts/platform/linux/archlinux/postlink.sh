@@ -3,6 +3,7 @@
 PACKAGES=(
     base-devel
     neovim
+    ripgrep
     xclip
     alacritty
     mpv

@@ -2,6 +2,7 @@
 
 PACKAGES=(
     nvim
+    ripgrep
     alacritty
     mpv
     zsh
