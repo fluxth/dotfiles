@@ -34,7 +34,7 @@ opt.joinspaces = false
 -- vim.opt.nowrap = true
 
 -- Searches
-opt.hlsearch = false
+opt.hlsearch = true
 opt.incsearch = true
 
 -- Sane splits

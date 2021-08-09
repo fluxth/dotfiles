@@ -90,3 +90,6 @@ map('i', ',', ',<c-g>u', { noremap = true, silent = true })
 -- moving texts
 map('v', 'J', ":m '>+1<cr>gv=gv", { noremap = true, silent = true })
 map('v', 'K', ":m '<-2<cr>gv=gv", { noremap = true, silent = true })
+
+-- escape from highlighted search with, you guessed it: <esc>
+map('n', '<esc>', '<esc>:nohls<cr>', { noremap = true, silent = true })
