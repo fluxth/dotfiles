@@ -24,7 +24,8 @@ Usage: $0 [options] actions ...
 
 Actions: [can chain multiple actions]
   install                   installs the required packages and links dotfiles
-  full-install              installs required and GUI related packages links dotfiles
+  extras-install            installs optional extra packages to your computer
+  full-install              installs required, GUI and extra packages links dotfiles
   link                      links the dotfiles to your XDG directories (default)
   unlink                    unlinks the dotfiles in your XDG directories
   relink                    shorthand for running "unlink link"
@@ -178,6 +179,14 @@ full_install(){
     fi
 }
 
+extras_install(){
+    if [[ $MACHINE_OS == "macOS" ]]; then
+        $DOTFILE_ROOT_DIR/scripts/platform/macos/extras_install.sh
+    elif [[ $MACHINE_OS == "Linux" ]]; then
+        $DOTFILE_ROOT_DIR/scripts/platform/linux/extras_install.sh
+    fi
+}
+
 ## Actions
 
 link(){
@@ -257,6 +266,7 @@ check_command_exit "curl"
 ACTIONS=(
     install
     full-install
+    extras-install
     link
     unlink
     relink
@@ -304,6 +314,10 @@ for opt do
             link
             post_install
             echo "Install finished successfully!"
+        ;;
+        extras-install)
+            extras_install
+            echo "Extras-install finished successfully!"
         ;;
         full-install)
             install
