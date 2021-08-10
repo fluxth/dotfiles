@@ -10,7 +10,7 @@ map('i', 'jk', '<esc>', { noremap = true, silent = true })
 -- file manipulation
 map('n', '<leader>qq', ':q<cr>', { noremap = true, silent = true })
 map('n', '<leader>qa', ':qa<cr>', { noremap = true, silent = true })
-map('n', '<leader>Q', ':q!<cr>', { noremap = true, silent = true })
+map('n', '<leader>qQ', ':q!<cr>', { noremap = true, silent = true })
 map('n', '<leader>w', ':w<cr>', { noremap = true, silent = true })
 map('n', '<leader>x', ':wq<cr>', { noremap = true, silent = true })
 map('n', '<leader>qw', ':wq<cr>', { noremap = true, silent = true })
