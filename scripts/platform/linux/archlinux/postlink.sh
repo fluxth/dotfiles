@@ -6,7 +6,6 @@ PACKAGES=(
     ripgrep
     xclip
     alacritty
-    mpv
     tmux
     rustup
     nodejs

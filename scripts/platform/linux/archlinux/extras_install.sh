@@ -4,6 +4,7 @@ PACKAGES=(
     jq
     tree
     neofetch
+    mpv
 )
 
 echo "Installing extra packages using yay..."
