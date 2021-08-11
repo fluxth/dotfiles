@@ -2,6 +2,8 @@
 
 Maybe unstable, use with caution!
 
+![Linux Desktop Screenshot](https://raw.githubusercontent.com/fluxth/dotfiles/docs/screenshots/linux_desktop.png)
+
 ## Requirements
 
 - **Platform** 
