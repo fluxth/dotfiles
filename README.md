@@ -1,19 +1,26 @@
-# fluxth's personal configuration files
+# fluxth's personal configuration
 
-Maybe unstable, use with caution!
+This repository contains my development environment configuration.
+
+An install script `dotfiles.sh` is included to manage linking/unlinking of configuration and also to get a fresh install of Linux/macOS up and running with full-fledged packages and configuration in one command!
+
+`main` branch is always tracked to my current setup, so it might break sometimes. Use with caution, but feel free to hack around! 😉
 
 ![Linux Desktop Screenshot](https://raw.githubusercontent.com/fluxth/dotfiles/docs/screenshots/linux_desktop.png)
 
 ## Requirements
 
 - **Platform** 
-  - Linux (Package install currently only supported on Arch Linux)
+  - Linux _(Package install is currently only supported on Arch Linux)_
   - macOS
-  - _Windows is not supported!_
 
-- **Dependencies** - These software must be avaliable on `PATH` before installing dotfiles
-  - stow
-  - curl
+- **Dependencies** - These software must be avaliable on `PATH` before installing dotfiles.
+  - GNU stow: `stow`
+  - cURL: `curl`
+
+- **Platform-based Dependencies** - If you are using the following platforms, and wish to use the package install feature.
+  - Arch Linux: [`yay`](https://github.com/Jguer/yay)
+  - macOS: Xcode or Xcode command-line tools: `xcode-select --install`
 
 ## Installation
 
@@ -37,6 +44,11 @@ To install baseline packages, GUI packages and link dotfiles, run:
 ./dotfiles.sh full-install
 ```
 
+To only install extra packages, run:
+```bash
+./dotfiles.sh extras-install
+```
+
 To clean your XDG directories before linking, run:
 ```bash
 ./dotfiles.sh clean
@@ -44,11 +56,10 @@ To clean your XDG directories before linking, run:
 
 You can also chain actions:
 ```bash
-./dotfiles.sh clean full-install
+./dotfiles.sh clean full-install extras-install
 ```
 
 For help, run:
 ```bash
 ./dotfiles.sh --help
 ```
-
