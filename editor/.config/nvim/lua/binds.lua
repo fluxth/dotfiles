@@ -16,12 +16,12 @@ map('n', '<leader>x', ':wq<cr>', { noremap = true, silent = true })
 map('n', '<leader>qw', ':wq<cr>', { noremap = true, silent = true })
 
 -- pane navigation
-map('n', '<leader>h', '<c-w>h', { noremap = true })
-map('n', '<leader>j', '<c-w>j', { noremap = true })
-map('n', '<leader>k', '<c-w>k', { noremap = true })
-map('n', '<leader>l', '<c-w>l', { noremap = true })
-map('n', '<leader>p', '<c-w>p', { noremap = true })
-map('n', '<leader>=', '<c-w>=', { noremap = true })
+map('n', '<leader>h', '<c-w>h', { noremap = true, silent = true })
+map('n', '<leader>j', '<c-w>j', { noremap = true, silent = true })
+map('n', '<leader>k', '<c-w>k', { noremap = true, silent = true })
+map('n', '<leader>l', '<c-w>l', { noremap = true, silent = true })
+map('n', '<leader>p', '<c-w>p', { noremap = true, silent = true })
+map('n', '<leader>=', '<c-w>=', { noremap = true, silent = true })
 
 -- escape from terminal insert mode
 map('t', [[<leader>\]], [[<c-\><c-n>]], { noremap = true })
