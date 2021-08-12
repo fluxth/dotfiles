@@ -10,9 +10,6 @@ fi
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
 
-# PATH configuration
-export PATH="$HOME/.local/bin:/usr/sbin:$PATH"
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -110,6 +107,9 @@ if [[ "$ENV_UNAME" == "Darwin" ]]; then
 elif [[ "$ENV_UNAME" == "Linux" ]]; then
     source "$XDG_CONFIG_HOME/zsh/linux.zsh"
 fi
+
+# PATH configuration
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
 # Load powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
