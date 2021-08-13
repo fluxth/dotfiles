@@ -98,6 +98,9 @@ export MANPAGER="nvim -c 'set ft=man' -"
 # export ARCHFLAGS="-arch x86_64"
 
 # Alieses
+if [[ ! -z "$TMUX" ]]; then
+    alias fzf="fzf-tmux"
+fi
 
 # Platform dependent configurations
 export ENV_UNAME=$(uname)
