@@ -11,6 +11,7 @@ PACKAGES=(
     youtube-dl
     exa
     git-delta
+    fzf
 )
 
 CASK_PACKAGES=(

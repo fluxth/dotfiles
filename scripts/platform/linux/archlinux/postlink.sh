@@ -15,6 +15,7 @@ PACKAGES=(
     ttf-meslo-nerd-font-powerlevel10k
     exa
     git-delta
+    fzf
 )
 
 yay --noconfirm --needed -S ${PACKAGES[@]}
