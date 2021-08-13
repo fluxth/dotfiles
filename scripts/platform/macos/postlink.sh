@@ -9,6 +9,7 @@ PACKAGES=(
     rustup-init
     node
     youtube-dl
+    exa
 )
 
 CASK_PACKAGES=(

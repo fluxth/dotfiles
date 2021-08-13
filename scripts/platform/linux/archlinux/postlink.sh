@@ -13,6 +13,7 @@ PACKAGES=(
     python-pip
     youtube-dl
     ttf-meslo-nerd-font-powerlevel10k
+    exa
 )
 
 yay --noconfirm --needed -S ${PACKAGES[@]}
