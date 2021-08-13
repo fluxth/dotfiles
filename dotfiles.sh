@@ -9,9 +9,9 @@ DOTFILE_DIRS=(
 )
 
 STOW_EXCLUDE=(
-    .DS_Store
-    .gitignore
-    .git
+    '\.DS_Store'
+    '\.gitignore'
+    '\.git'
 )
 
 EXTRA_CLEAN_ITEMS=(
