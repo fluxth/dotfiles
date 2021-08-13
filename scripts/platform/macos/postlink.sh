@@ -10,6 +10,7 @@ PACKAGES=(
     node
     youtube-dl
     exa
+    git-delta
 )
 
 CASK_PACKAGES=(

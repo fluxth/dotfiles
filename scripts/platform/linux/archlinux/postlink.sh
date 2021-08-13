@@ -14,6 +14,7 @@ PACKAGES=(
     youtube-dl
     ttf-meslo-nerd-font-powerlevel10k
     exa
+    git-delta
 )
 
 yay --noconfirm --needed -S ${PACKAGES[@]}
