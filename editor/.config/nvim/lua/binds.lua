@@ -10,11 +10,13 @@ map('i', 'kj', '<esc>', { noremap = true, silent = true })
 
 -- file manipulation
 map('n', '<leader>qq', ':q<cr>', { noremap = true, silent = true })
-map('n', '<leader>qa', ':qa<cr>', { noremap = true, silent = true })
 map('n', '<leader>qQ', ':q!<cr>', { noremap = true, silent = true })
+map('n', '<leader>qa', ':qa<cr>', { noremap = true, silent = true })
+map('n', '<leader>qA', ':qa!<cr>', { noremap = true, silent = true })
 map('n', '<leader>w', ':w<cr>', { noremap = true, silent = true })
-map('n', '<leader>x', ':wq<cr>', { noremap = true, silent = true })
 map('n', '<leader>qw', ':wq<cr>', { noremap = true, silent = true })
+map('n', '<leader>qW', ':wq!<cr>', { noremap = true, silent = true })
+map('n', '<leader>x', ':wq<cr>', { noremap = true, silent = true })
 
 -- pane navigation
 map('n', '<leader>h', '<c-w>h', { noremap = true, silent = true })
