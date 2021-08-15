@@ -6,6 +6,7 @@ vim.g.mapleader = ' '
 
 -- esc is hard to reach
 map('i', 'jk', '<esc>', { noremap = true, silent = true })
+map('i', 'kj', '<esc>', { noremap = true, silent = true })
 
 -- file manipulation
 map('n', '<leader>qq', ':q<cr>', { noremap = true, silent = true })
