@@ -1,13 +1,15 @@
 #! /bin/sh
 
-pgrep -x sxhkd > /dev/null || sxhkd &
-xrandr --dpi 144
-[ -x ~/.config/polybar/launch.sh ] && ~/.config/polybar/launch.sh &
-nitrogen --restore &
-picom &
 xsetroot -cursor_name left_ptr
 setxkbmap -option caps:escape
 setxkbmap -option grp:alt_shift_toggle us,th
+setxkbmap -option altwin:swap_alt_win
+xrandr --dpi 144
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+[[ -x ~/.config/polybar/launch.sh ]] && ~/.config/polybar/launch.sh &
+nitrogen --restore &
+picom &
 
 bspc monitor -d term www edit fm av sys a b c ext
 
