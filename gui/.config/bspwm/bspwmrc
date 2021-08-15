@@ -36,10 +36,11 @@ bspc rule -a Pcmanfm        desktop=fm   follow=on
 # Bind editors to edit workspace
 bspc rule -a Code           desktop=edit follow=on
 
-bspc rule -a KeePassXC      desktop=sys  follow=on
-
 bspc rule -a mpv            desktop=av   follow=on state=floating
 bspc rule -a mplayer2       desktop=av   follow=on state=floating
+
+# sys workspace
+bspc rule -a KeePassXC      desktop=sys  follow=on
 
 # Window manager exceptions
 bspc rule -a polybar        border=off manage=off
