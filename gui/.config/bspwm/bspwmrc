@@ -36,6 +36,8 @@ bspc rule -a Pcmanfm        desktop=fm   follow=on
 # Bind editors to edit workspace
 bspc rule -a Code           desktop=edit follow=on
 
+# Bind media players to av workspace
+bspc rule -a Spotify        desktop=av   follow=on
 bspc rule -a mpv            desktop=av   follow=on state=floating
 bspc rule -a mplayer2       desktop=av   follow=on state=floating
 
