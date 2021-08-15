@@ -82,6 +82,8 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 KEYTIMEOUT=1
 
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
 bindkey '^ ' autosuggest-accept
 bindkey '^X' autosuggest-clear
 
