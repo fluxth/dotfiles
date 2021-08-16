@@ -1,16 +1,19 @@
 configuration {
-/*	modi: "window,run,ssh";*/
+	modi: "window,run,drun";
+	font: "Meslo LGS NF 16";
+	show-icons: true;
+	matching: "fuzzy";
+	line-padding: 10;
+	dpi: 144;
 /*	width: 50;*/
 /*	lines: 15;*/
 /*	columns: 1;*/
-	font: "Meslo LGS NF 18";
 /*	bw: 1;*/
 /*	location: 0;*/
 /*	padding: 5;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
-	show-icons: true;
 /*	terminal: "rofi-sensible-terminal";*/
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
@@ -37,17 +40,14 @@ configuration {
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
 /*	combi-modi: "window,run";*/
-	matching: "fuzzy";
 /*	tokenize: true;*/
 /*	m: "-5";*/
 /*	line-margin: 2;*/
-/*	line-padding: 1;*/
 /*	filter: ;*/
 /*	separator-style: "dash";*/
 /*	hide-scrollbar: false;*/
 /*	fullscreen: false;*/
 /*	fake-transparency: false;*/
-/*	dpi: -1;*/
 /*	threads: 0;*/
 /*	scrollbar-width: 8;*/
 /*	scroll-method: 0;*/
