@@ -3,7 +3,7 @@
 PACKAGES=(
     bspwm
     sxhkd
-    dmenu
+    rofi
     picom
     nitrogen
     polybar

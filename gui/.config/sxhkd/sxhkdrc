@@ -7,8 +7,8 @@ super + Return
     alacritty
 
 # program launcher
-super + @space
-    dmenu_run -p '>' -fn 'Droid Sans Mono-18' -b
+super + {_,alt + }@space
+    rofi -show {drun,run}
 
 # browser
 super + b
@@ -25,6 +25,10 @@ super + k
 # make sxhkd reload its configuration files:
 super + Escape
     pkill -USR1 -x sxhkd
+
+# make sxhkd reload its configuration files:
+super + w
+    rofi -show window
 
 #
 # bspwm hotkeys
