@@ -28,7 +28,18 @@
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": true,
-                    "simple_modifications": []
+                    "simple_modifications": [
+                        {
+                            "from": {
+                                "key_code": "caps_lock"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "escape"
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     "disable_built_in_keyboard_if_exists": false,
@@ -205,11 +216,11 @@
                         },
                         {
                             "from": {
-                                "key_code": "right_option"
+                                "key_code": "pause"
                             },
                             "to": [
                                 {
-                                    "key_code": "right_command"
+                                    "consumer_key_code": "volume_increment"
                                 }
                             ]
                         },
@@ -225,21 +236,21 @@
                         },
                         {
                             "from": {
-                                "key_code": "scroll_lock"
+                                "key_code": "right_option"
                             },
                             "to": [
                                 {
-                                    "consumer_key_code": "volume_decrement"
+                                    "key_code": "right_command"
                                 }
                             ]
                         },
                         {
                             "from": {
-                                "key_code": "pause"
+                                "key_code": "scroll_lock"
                             },
                             "to": [
                                 {
-                                    "consumer_key_code": "volume_increment"
+                                    "consumer_key_code": "volume_decrement"
                                 }
                             ]
                         }
