@@ -31,6 +31,19 @@ super + w
     rofi -show window
 
 #
+# media keys
+#
+
+XF86Audio{RaiseVolume,LowerVolume}
+    amixer set Master 5%{+,-}
+
+XF86AudioMute
+    amixer set Master toggle
+
+XF86Audio{Play,Stop,Prev,Next}
+    playerctl {play-pause,stop,previous,next}
+
+#
 # bspwm hotkeys
 #
 

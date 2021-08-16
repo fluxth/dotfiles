@@ -7,6 +7,7 @@ PACKAGES=(
     picom
     nitrogen
     polybar
+    playerctl
     xorg-xrandr
     xorg-xsetroot
 )
