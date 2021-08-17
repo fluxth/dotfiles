@@ -5,6 +5,7 @@ ENSURE_FILE_LINKS=(
     ~/.config/coc/extensions/
     ~/.config/mpv/
     ~/.config/systemd/user/
+    ~/.config/pulse/
     ~/.local/bin/
     ~/.gnupg/
 )

@@ -1,0 +1,4 @@
+.include /etc/pulse/default.pa
+
+# Don't sleep soundcard on idle
+unload-module module-suspend-on-idle
