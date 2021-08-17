@@ -19,3 +19,4 @@ PACKAGES=(
 )
 
 yay --noconfirm --needed -S ${PACKAGES[@]}
+systemctl enable --user ssh-agent

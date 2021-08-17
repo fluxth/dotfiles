@@ -3,8 +3,9 @@
 # Ensure file symlinks
 ENSURE_FILE_LINKS=(
     ~/.config/coc/extensions/
-    ~/.local/bin/
     ~/.config/mpv/
+    ~/.config/systemd/user/
+    ~/.local/bin/
     ~/.gnupg/
 )
 
