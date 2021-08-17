@@ -12,6 +12,8 @@ PACKAGES=(
     xorg-xrandr
     xorg-xsetroot
     apple-fonts
+    noto-fonts-emoji
+    noto-fonts-cjk
 )
 
 yay --needed --noconfirm -S ${PACKAGES[@]}

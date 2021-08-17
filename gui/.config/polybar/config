@@ -24,10 +24,11 @@ line-size = 2
 padding = 1
 module-margin = 1
 
-font-0 = "SF Mono:size=10;1"
-font-1 = "SF Mono:size=10;1"
+font-0 = "SF Mono:size=10:antialias=true;1"
+font-1 = "SF Mono:size=10:antialias=true;1"
 font-2 = "Noto Sans Symbols:size=10;1"
 font-3 = "Noto Sans Symbols2:size=10;1"
+font-4 = Noto Sans CJK JP:size=10:antialias=true;0
 
 modules-left = date bspwm xwindow
 modules-center =
