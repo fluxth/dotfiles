@@ -5,6 +5,7 @@ PACKAGES=(
     sxhkd
     rofi
     picom
+    dunst
     nitrogen
     polybar
     playerctl

@@ -10,6 +10,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 [[ -x ~/.config/polybar/launch.sh ]] && ~/.config/polybar/launch.sh &
 nitrogen --restore &
 picom &
+dunst &
 
 bspc monitor -d term www edit fm av sys a b c ext
 
@@ -46,4 +47,5 @@ bspc rule -a KeePassXC      desktop=sys  follow=on
 
 # Window manager exceptions
 bspc rule -a polybar        border=off manage=off
+bspc rule -a Dunst          border=off manage=off
 bspc rule -a Screenkey      manage=off
