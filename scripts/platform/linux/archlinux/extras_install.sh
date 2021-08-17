@@ -5,6 +5,9 @@ PACKAGES=(
     tree
     neofetch
     mpv
+    brave-bin
+    spotify
+    keepassxc
 )
 
 echo "Installing extra packages using yay..."
