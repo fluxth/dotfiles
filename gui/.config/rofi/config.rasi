@@ -1,6 +1,6 @@
 configuration {
 	modi: "window,run,drun";
-	font: "Meslo LGS NF 16";
+	font: "SF Mono 16";
 	show-icons: true;
 	matching: "fuzzy";
 	line-padding: 10;

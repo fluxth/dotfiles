@@ -11,6 +11,7 @@ PACKAGES=(
     playerctl
     xorg-xrandr
     xorg-xsetroot
+    apple-fonts
 )
 
 yay --needed --noconfirm -S ${PACKAGES[@]}

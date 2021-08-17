@@ -54,7 +54,7 @@
     separator_height = 1
 
     # Padding between text and separator.
-    padding = 8
+    padding = 15
 
     # Horizontal padding.
     horizontal_padding = 20
@@ -86,7 +86,7 @@
 
     ### Text ###
 
-    font = Noto Sans 12
+    font = SF Pro Rounded Medium 12
     #font = Monospace 10
 
     # The spacing between lines.  If the height is smaller than the
@@ -295,7 +295,7 @@
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#282a36"
     foreground = "#95a3cf"
-    timeout = 5
+    timeout = 7
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
