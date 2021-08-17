@@ -5,6 +5,7 @@ ENSURE_FILE_LINKS=(
     ~/.config/coc/extensions/
     ~/.local/bin/
     ~/.config/mpv/
+    ~/.gnupg/
 )
 
 for dir in "${ENSURE_FILE_LINKS[@]}"; do
