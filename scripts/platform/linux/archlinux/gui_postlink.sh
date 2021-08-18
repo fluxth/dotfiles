@@ -10,6 +10,7 @@ PACKAGES=(
     polybar
     thunar
     playerctl
+    xss-lock
     xsecurelock
     xorg-xrandr
     xorg-xsetroot

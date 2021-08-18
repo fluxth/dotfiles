@@ -5,12 +5,15 @@ setxkbmap -option grp:alt_shift_toggle us,th
 setxkbmap -option altwin:swap_alt_win
 xrandr --dpi 144
 xsetroot -cursor_name left_ptr
+xset s on
+xset 480 120
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 [[ -x ~/.config/polybar/launch.sh ]] && ~/.config/polybar/launch.sh &
 nitrogen --restore &
 picom &
 dunst &
+xss-lock lock-screen &
 
 bspc monitor -d term www edit fm av sys a b c ext
 
