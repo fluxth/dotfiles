@@ -1,0 +1,3 @@
+#!/bin/sh
+source ~/.config/xsecurelock/env.sh
+exec xsecurelock

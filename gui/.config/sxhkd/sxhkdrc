@@ -30,6 +30,10 @@ super + Escape
 super + w
     rofi -show window
 
+# lock the screen
+super + ctrl + alt + l
+    lock-screen
+
 #
 # media keys
 #

@@ -10,6 +10,7 @@ PACKAGES=(
     polybar
     thunar
     playerctl
+    xsecurelock
     xorg-xrandr
     xorg-xsetroot
     apple-fonts
