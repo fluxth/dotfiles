@@ -7,6 +7,7 @@ ENSURE_FILE_LINKS=(
     ~/.config/systemd/user/
     ~/.config/pulse/
     ~/.local/bin/
+    ~/.local/share/
     ~/.gnupg/
 )
 
