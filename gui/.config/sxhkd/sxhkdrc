@@ -16,7 +16,7 @@ super + b
 
 # file explorer
 super + e
-    thunar
+    xdg-open ~
 
 # password manager
 super + k

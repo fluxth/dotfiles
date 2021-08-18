@@ -8,6 +8,7 @@ PACKAGES=(
     dunst
     nitrogen
     polybar
+    thunar
     playerctl
     xorg-xrandr
     xorg-xsetroot
