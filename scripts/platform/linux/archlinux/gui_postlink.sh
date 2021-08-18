@@ -14,6 +14,7 @@ PACKAGES=(
     apple-fonts
     noto-fonts-emoji
     noto-fonts-cjk
+    noto-fonts
 )
 
 yay --needed --noconfirm -S ${PACKAGES[@]}

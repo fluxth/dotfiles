@@ -8,6 +8,7 @@ PACKAGES=(
     brave-bin
     spotify
     keepassxc
+    ttf-ms-fonts
 )
 
 echo "Installing extra packages using yay..."
