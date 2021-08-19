@@ -10,6 +10,7 @@ PACKAGES=(
     polybar
     thunar
     playerctl
+    redshift
     xss-lock
     xsecurelock
     xorg-xrandr
