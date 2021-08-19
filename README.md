@@ -12,7 +12,7 @@ An install script `dotfiles.sh` is included to manage linking/unlinking of confi
 
 - **Platform** 
   - Linux _(Package install is currently only supported on Arch Linux)_
-  - macOS
+  - macOS _(Both Intel and ARM-based Macs are supported)_
 
 - **Dependencies** - These software must be avaliable on `PATH` before installing dotfiles.
   - GNU stow: `stow`
