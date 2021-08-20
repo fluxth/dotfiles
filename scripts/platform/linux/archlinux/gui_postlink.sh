@@ -16,6 +16,7 @@ PACKAGES=(
     xsecurelock
     xorg-xrandr
     xorg-xsetroot
+    arandr
     apple-fonts
     noto-fonts-emoji
     noto-fonts-cjk

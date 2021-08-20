@@ -9,6 +9,8 @@ PACKAGES=(
     spotify
     keepassxc
     ttf-ms-fonts
+    jack2
+    jack2-dbus
 )
 
 echo "Installing extra packages using yay..."
