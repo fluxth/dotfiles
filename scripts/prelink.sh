@@ -3,6 +3,7 @@
 # Ensure file symlinks
 ENSURE_FILE_LINKS=(
     ~/.config/coc/extensions/
+    ~/.config/gtk-3.0/
     ~/.config/mpv/
     ~/.config/systemd/user/
     ~/.config/pulse/
