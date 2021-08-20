@@ -14,6 +14,7 @@ nitrogen --restore &
 picom &
 dunst &
 xss-lock lock-screen &
+pgrep -x redshift-gtk > /dev/null || redshift-gtk &
 
 bspc monitor -d term www edit fm av sys a b c ext
 
@@ -47,6 +48,9 @@ bspc rule -a mplayer2       desktop=av   follow=on state=floating
 
 # sys workspace
 bspc rule -a KeePassXC      desktop=sys  follow=on
+
+# Floating window
+bspc rule -a QjackCtl       state=floating
 
 # Window manager exceptions
 bspc rule -a polybar        border=off manage=off
