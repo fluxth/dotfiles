@@ -19,14 +19,14 @@ super + e
     xdg-open ~
 
 # password manager
-super + k
+super + slash
     keepassxc
 
 # make sxhkd reload its configuration files:
 super + Escape
     pkill -USR1 -x sxhkd
 
-# make sxhkd reload its configuration files:
+# show window picker
 super + w
     rofi -show window
 
