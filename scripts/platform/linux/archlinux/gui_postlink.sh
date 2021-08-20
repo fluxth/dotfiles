@@ -8,6 +8,7 @@ PACKAGES=(
     dunst
     nitrogen
     polybar
+    pulseaudio-control
     thunar
     playerctl
     redshift

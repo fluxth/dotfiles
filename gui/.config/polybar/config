@@ -32,7 +32,7 @@ font-4 = Noto Sans CJK JP:size=10:antialias=true;0
 
 modules-left = date bspwm xwindow
 modules-center =
-modules-right = pulseaudio xkeyboard eth cpu memory powermenu
+modules-right = pulseaudio-control xkeyboard eth cpu memory powermenu
 
 tray-position = right
 tray-padding = 2
@@ -147,6 +147,21 @@ bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/pulseaudio-control]
+type = custom/script
+tail = true
+format-underline = #666
+label-foreground = ${colors.foreground}
+
+# Options: https://github.com/marioortizmanero/polybar-pulseaudio-control
+# --sink-nickname "alsa_output.pci-0000_26_00.1.hdmi-stereo-extra1:· HDMI" 
+exec = pulseaudio-control --volume-max 100 --icons-volume "🔈,🔉,🔊" --icon-muted "🔇" --sink-nicknames-from "alsa.name" --format '$VOL_ICON ${VOL_LEVEL}% · $SINK_NICKNAME' --sink-nickname "alsa_output.pci-0000_26_00.1.hdmi-stereo-extra1:HDMI" --sink-nickname "alsa_output.usb-Focusrite_Scarlett_Solo_USB_Y741RVG940863D-00.analog-stereo:Monitors" listen
+click-right = exec pavucontrol &
+click-left = pulseaudio-control togmute
+click-middle = pulseaudio-control next-sink
+scroll-up = pulseaudio-control --volume-step 5 --volume-max 130 up
+scroll-down = pulseaudio-control --volume-step 5 --volume-max 130 down
 
 [module/wlan]
 type = internal/network
