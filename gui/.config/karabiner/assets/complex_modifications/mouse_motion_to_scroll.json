@@ -1,0 +1,248 @@
+{
+    "title": "Mouse Motion to Scroll",
+    "rules": [
+        {
+            "description": "Map mouse motion to scroll",
+            "manipulators": [
+                {
+                    "type": "mouse_motion_to_scroll",
+                    "from": {
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "enable_mouse_motion_to_scroll",
+                            "value": 1
+                        }
+                    ],
+                    "options": {
+                        "momentum_scroll_enabled": false,
+                        "speed_multiplier": 4
+                    }
+                }
+            ]
+        },
+        {
+            "description": "Trigger scroll on F1 key",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f1",
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "enable_mouse_motion_to_scroll",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "enable_mouse_motion_to_scroll",
+                                "value": 0
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Trigger scroll on Shift + ESC",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "escape",
+                        "modifiers": {
+                            "mandatory": ["shift"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "enable_mouse_motion_to_scroll",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "enable_mouse_motion_to_scroll",
+                                "value": 0
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Toggle scroll on Option + ESC",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "escape",
+                        "modifiers": {
+                            "mandatory": ["option"]
+                        }
+                    },
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "enable_mouse_motion_to_scroll",
+                            "value": 0
+                        }
+                    ],
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "enable_mouse_motion_to_scroll",
+                                "value": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "escape",
+                        "modifiers": {
+                            "mandatory": ["option"]
+                        }
+                    },
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "enable_mouse_motion_to_scroll",
+                            "value": 1
+                        }
+                    ],
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "enable_mouse_motion_to_scroll",
+                                "value": 0
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Toggle scroll on mouse button 4 (Back)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "pointing_button": "button4",
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "enable_mouse_motion_to_scroll",
+                            "value": 0
+                        }
+                    ],
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "enable_mouse_motion_to_scroll",
+                                "value": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "pointing_button": "button4",
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "enable_mouse_motion_to_scroll",
+                            "value": 1
+                        }
+                    ],
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "enable_mouse_motion_to_scroll",
+                                "value": 0
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Toggle scroll on mouse button 5 (Forward)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "pointing_button": "button5",
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "enable_mouse_motion_to_scroll",
+                            "value": 0
+                        }
+                    ],
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "enable_mouse_motion_to_scroll",
+                                "value": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "pointing_button": "button4",
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "enable_mouse_motion_to_scroll",
+                            "value": 1
+                        }
+                    ],
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "enable_mouse_motion_to_scroll",
+                                "value": 0
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

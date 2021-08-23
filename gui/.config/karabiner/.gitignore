@@ -1,0 +1,10 @@
+*
+
+!.gitignore
+!karabiner.json
+
+!assets/
+!assets/*
+!assets/**/*
+
+**/.DS_Store
