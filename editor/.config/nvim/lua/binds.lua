@@ -61,8 +61,8 @@ map('n', '<leader>[', '^', { noremap = true })
 map('n', '<leader>]', '$', { noremap = true })
 
 -- the system clipboard (tm)
-map('n', '<leader>`', '"*', { noremap = true })
-map('v', '<leader>`', '"*', { noremap = true })
+map('n', '<leader>`', '"+', { noremap = true })
+map('v', '<leader>`', '"+', { noremap = true })
 
 -- better indenting
 map('v', '<', '<gv', { noremap = true, silent = true })

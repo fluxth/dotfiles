@@ -2,3 +2,8 @@
 	path = personal
 	url = git@github.com:fluxth/dotfiles-personal.git
 	branch = main
+
+[submodule "work"]
+	path = work
+	url = git@github.com:fluxth/dotfiles-work.git
+	branch = main

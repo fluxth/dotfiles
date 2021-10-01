@@ -5,6 +5,7 @@ DOTFILE_DIRS=(
     editor
     gui
     personal
+    work
     shell
 )
 

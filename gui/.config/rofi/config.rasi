@@ -4,7 +4,7 @@ configuration {
 	show-icons: true;
 	matching: "fuzzy";
 	line-padding: 10;
-	dpi: 144;
+/*	dpi: 144;*/
 /*	width: 50;*/
 /*	lines: 15;*/
 /*	columns: 1;*/

@@ -53,7 +53,7 @@ nmap <leader>v] <Plug>(coc-diagnostic-next)
 nmap <leader>rn <Plug>(coc-rename)
 
 " coc explorer
-nnoremap <leader>e :CocCommand explorer<CR>
+nnoremap <silent> <leader>e :CocCommand explorer<CR>
 
 " coc snippet
 imap <C-l> <Plug>(coc-snippets-expand)

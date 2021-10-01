@@ -1,0 +1,34 @@
+   33  yay -S chromium
+   66  yay -S mpv
+   67  yay -S keepassxc
+   78  yay -S bashtop
+   96  yay -S thunar-volman
+   97  yay -S gvfs
+  124  yay -S autorandr
+  150  yay -S pavumeter
+  157  yay -S pavuctl
+  159  yay -S pavucontrol
+  164  yay -S spotify
+  183  yay -S visual-studio-code-bin
+  202  yay -S nm-applet
+  203  yay -S network-manager-applet
+  219  yay -S openvpn
+  223  yay -S networkmanager-openvpn
+  240  yay -S xfce4-screenshoort
+  241  yay -S xfce4-screenshooter
+  244  yay -S spectacle
+  366  yay -S autorandr
+  381  yay -S xsecurelock
+  404  yay -S gwenview okular
+  428  yay -S alsa-utils
+  440  yay -S veracrypt
+  491  yay -S htop
+  541  yay -S libva-intel-driver
+  543  yay -S libva-utils
+  548  yay -S google-chrome
+  620  yay -S docker
+  637  yay -S tumbler ffmpegthumbnailer
+  660  yay -S bluez bluez-utils
+  665  yay -S pipewire
+  672  yay -S pipewire-pulse
+  692  yay -S update-grub

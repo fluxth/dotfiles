@@ -12,7 +12,7 @@ super + {_,alt + }@space
 
 # browser
 super + b
-    brave
+    google-chrome-stable --force-dark-mode
 
 # file explorer
 super + e
@@ -34,6 +34,12 @@ super + w
 super + ctrl + alt + l
     lock-screen
 
+Print
+    spectacle
+
+#super + \
+#    bspc wm -O HDMI1 eDP1
+
 #
 # media keys
 #
@@ -46,6 +52,12 @@ XF86AudioMute
 
 XF86Audio{Play,Stop,Prev,Next}
     playerctl {play-pause,stop,previous,next}
+
+XF86MonBrightnessUp
+    xbacklight -inc 10
+
+XF86MonBrightnessDown
+    xbacklight -dec 10
 
 #
 # bspwm hotkeys
