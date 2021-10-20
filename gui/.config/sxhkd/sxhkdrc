@@ -12,7 +12,7 @@ super + {_,alt + }@space
 
 # browser
 super + b
-    google-chrome-stable --force-dark-mode
+    chromium
 
 # file explorer
 super + e
@@ -32,10 +32,10 @@ super + w
 
 # lock the screen
 super + ctrl + alt + l
-    lock-screen
+    ~/.local/bin/lock-screen
 
-Print
-    spectacle
+{_,ctrl + }Print
+    spectacle {-m,-r}
 
 #super + \
 #    bspc wm -O HDMI1 eDP1
