@@ -1,4 +1,3 @@
-   33  yay -S chromium
    66  yay -S mpv
    67  yay -S keepassxc
    78  yay -S bashtop
@@ -32,3 +31,27 @@
   665  yay -S pipewire
   672  yay -S pipewire-pulse
   692  yay -S update-grub
+  709  yay -S kubectl
+  841  yay -S tree
+  872  yay -S blueman
+ 1010  yay -S bat
+ 1051  yay -S black
+ 1150  yay -S zbar-tools
+ 1151  yay -S zbar
+ 1180  yay -S zip unzip
+ 1246  yay -S linux-lts
+ 1281  yay -S grub-customizer
+ 1332  yay -S --needed jq tree neofetch mpv ttf-ms-fonts 
+ 1335  yay -S --needed xf86-video-amdgpu vulkan-radeon libva-mesa-driver 
+ 1336  yay -S --needed mesa-vdpau
+ 1389  yay -S python-lolcat
+ 1434  yay -S netcat
+ 1515  yay -S traceroute
+ 1516  yay -S net-tools
+ 1588  yay -S docker-compose
+ 1610  yay -S postgresql-libs
+ 1636  yay -S yarn
+ 2211  yay -S simple-http-server
+ 2443  yay -S chromium-vaapi
+ 2444  yay -S chromium
+ 3358  yay -S typescript
