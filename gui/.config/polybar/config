@@ -7,7 +7,7 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
-[bar/main]
+[bar/base]
 #dpi = 144
 monitor = ${env:MONITOR:eDP1}
 width = 100%
@@ -39,6 +39,13 @@ tray-padding = 2
 tray-maxsize = 24
 
 wm-restack = bspwm
+
+[bar/small]
+inherit = bar/base
+modules-right = pulseaudio-control-small xkeyboard battery cpu memory powermenu
+
+[bar/large]
+inherit = bar/base
 
 [global/wm]
 margin-top = 0
@@ -96,6 +103,11 @@ label-urgent-underline = #9b0a20
 
 label-empty = " %name% "
 label-empty-foreground = #555555
+
+[module/xwindow-small]
+inherit = module/xwindow
+
+label = %title:0:35:...%
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -194,6 +206,11 @@ click-left = pulseaudio-control togmute
 click-middle = pulseaudio-control next-sink
 scroll-up = pulseaudio-control --volume-step 5 --volume-max 130 up
 scroll-down = pulseaudio-control --volume-step 5 --volume-max 130 down
+
+[module/pulseaudio-control-small]
+inherit = module/pulseaudio-control
+
+exec = pulseaudio-control --volume-max 100 --icons-volume "🔈,🔉,🔊" --icon-muted "🔇" --format '$VOL_ICON ${VOL_LEVEL}%' listen
 
 [module/wlan]
 type = internal/network
