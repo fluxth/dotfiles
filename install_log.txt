@@ -55,3 +55,11 @@
  2443  yay -S chromium-vaapi
  2444  yay -S chromium
  3358  yay -S typescript
+ 4476  yay -Sy postman-bin
+ 4662  yay -S ipython
+ 4677  yay -S reflector
+ 5340  yay -Sy btop
+ 5344  yay -S pamixer
+ 5442  yay -S tlp
+ 5483  yay -S emacs
+ 5484  yay -S fd

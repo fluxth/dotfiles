@@ -45,10 +45,10 @@ super + ctrl + alt + l
 #
 
 XF86Audio{RaiseVolume,LowerVolume}
-    amixer set Master 5%{+,-}
+    pamixer {-i,-d} 5
 
 XF86AudioMute
-    amixer set Master toggle
+    pamixer -t
 
 XF86Audio{Play,Stop,Prev,Next}
     playerctl {play-pause,stop,previous,next}
