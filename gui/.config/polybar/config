@@ -98,7 +98,7 @@ enable-click = true
 enable-scroll = true
 
 label-focused = " %name% "
-label-focused-background = #333
+label-focused-background = #ee333333
 label-focused-underline = #fba922
 
 label-occupied = " %name% "
