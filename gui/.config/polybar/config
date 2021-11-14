@@ -95,7 +95,7 @@ label = %title:0:35:...%
 type = internal/bspwm
 pin-workspaces = false
 enable-click = true
-enable-scroll = true
+enable-scroll = false
 
 label-focused = " %name% "
 label-focused-background = #ee333333
