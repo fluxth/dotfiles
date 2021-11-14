@@ -1,0 +1,3 @@
+#!/bin/sh
+bspc wm -r
+bspc wm --reorder-monitors HDMI-1 eDP-1
