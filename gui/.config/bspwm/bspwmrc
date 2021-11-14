@@ -10,15 +10,14 @@ xset 480 120
 xset r rate 300 40
 
 # TODO: Make laptop screen only work
+autorandr -c
 if [[ "$(xrandr -q | grep -w connected -c)" == "1" ]]; then
-    ~/.screenlayout/portable.sh
-    bspc monitor eDP1 -d term www edit fm av sys a b c ext
+    bspc monitor eDP-1 -d term www edit fm av sys a b c ext
 else
-    ~/.screenlayout/home_docked.sh
-    bspc monitor HDMI1 -d term www edit fm a b
-    bspc monitor eDP1 -d sys x y av
+    bspc monitor HDMI-1 -d term www edit fm a b
+    bspc monitor eDP-1 -d sys x y av
 
-    bpsc wm --reorder-monitors HDMI1 eDP1
+    bpsc wm --reorder-monitors HDMI-1 eDP-1
 fi
 
 pgrep -x sxhkd > /dev/null || SXHKD_SHELL=/bin/zsh sxhkd &
@@ -27,7 +26,7 @@ nitrogen --restore &
 picom &
 dunst &
 xss-lock ~/.local/bin/lock-screen &
-pgrep -x redshift-gtk > /dev/null || redshift-gtk &
+pgrep -x redshift > /dev/null || redshift-gtk &
 pgrep -x nm-applet > /dev/null || nm-applet &
 
 bspc config border_width        2
@@ -74,4 +73,4 @@ bspc config remove_unplugged_monitors true
 bspc config remove_disabled_monitors true
 bspc config merge_overlapping_monitors true
 
-#sleep 5 && bpsc wm --reorder-monitors HDMI1 eDP1
+# sleep 10 && bpsc wm --reorder-monitors HDMI1 eDP1

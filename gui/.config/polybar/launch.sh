@@ -15,7 +15,7 @@ if type "xrandr"; then
             # Make tray appear on HDMI monitor
             bar=small
             traypos=''
-            if [[ "$m" == "HDMI1" ]]; then
+            if [[ "$m" == "HDMI-1" ]]; then
                 traypos=right
                 bar=large
             fi
