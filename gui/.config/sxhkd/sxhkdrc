@@ -53,11 +53,8 @@ XF86AudioMute
 XF86Audio{Play,Stop,Prev,Next}
     playerctl {play-pause,stop,previous,next}
 
-XF86MonBrightnessUp
-    xbacklight -inc 10
-
-XF86MonBrightnessDown
-    xbacklight -dec 10
+XF86MonBrightness{Up,Down}
+    brightnessctl set {+10%,10%-}
 
 #
 # bspwm hotkeys
