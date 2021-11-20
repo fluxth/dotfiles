@@ -12,7 +12,7 @@ super + {_,alt + }@space
 
 # browser
 super + b
-    brave
+    chromium
 
 # file explorer
 super + e
