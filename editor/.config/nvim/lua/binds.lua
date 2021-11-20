@@ -89,6 +89,7 @@ map('n', 'J', 'mzJ`z', { noremap = true, silent = true })
 -- undo breakpoints
 map('i', '.', '.<c-g>u', { noremap = true, silent = true })
 map('i', ',', ',<c-g>u', { noremap = true, silent = true })
+map('i', '=', '=<c-g>u', { noremap = true, silent = true })
 
 -- moving texts
 map('v', 'J', ":m '>+1<cr>gv=gv", { noremap = true, silent = true })
