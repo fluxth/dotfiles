@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/zsh
 
 setxkbmap -option caps:escape
 setxkbmap -option grp:alt_shift_toggle us,th
@@ -7,6 +7,7 @@ xrandr --dpi 144
 xsetroot -cursor_name left_ptr
 xset s on
 xset 480 120
+xset r rate 300 40
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 [[ -x ~/.config/polybar/launch.sh ]] && ~/.config/polybar/launch.sh &
@@ -14,7 +15,8 @@ nitrogen --restore &
 picom &
 dunst &
 xss-lock lock-screen &
-pgrep -x redshift-gtk > /dev/null || redshift-gtk &
+pgrep -x redshift > /dev/null || redshift-gtk &
+pgrep -x nm-applet > /dev/null || nm-applet &
 
 bspc monitor -d term www edit fm av sys a b c ext
 
@@ -30,6 +32,7 @@ bspc config normal_border_color     '#1d2021'
 
 # Bind browsers to www workspace
 bspc rule -a Chromium       desktop=www  follow=on
+bspc rule -a Google-chrome  desktop=www  follow=on
 bspc rule -a Brave-browser  desktop=www  follow=on
 bspc rule -a firefox        desktop=www  follow=on
 

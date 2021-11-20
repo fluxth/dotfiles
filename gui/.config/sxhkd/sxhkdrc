@@ -32,20 +32,26 @@ super + w
 
 # lock the screen
 super + ctrl + alt + l
-    lock-screen
+    ~/.local/bin/lock-screen
+
+{_,ctrl + }Print
+    spectacle {-m,-r}
 
 #
 # media keys
 #
 
 XF86Audio{RaiseVolume,LowerVolume}
-    amixer set Master 5%{+,-}
+    pamixer {-i,-d} 5
 
 XF86AudioMute
-    amixer set Master toggle
+    pamixer -t
 
 XF86Audio{Play,Stop,Prev,Next}
     playerctl {play-pause,stop,previous,next}
+
+XF86MonBrightness{Up,Down}
+    brightnessctl set {+10%,10%-}
 
 #
 # bspwm hotkeys

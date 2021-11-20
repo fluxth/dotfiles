@@ -11,6 +11,11 @@ PACKAGES=(
     pulseaudio-control
     thunar
     playerctl
+    pamixer
+    brightnessctl
+    network-manager-applet
+    tumbler
+    ffmpegthumbnailer
     redshift
     xss-lock
     xsecurelock

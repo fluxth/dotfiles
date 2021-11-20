@@ -9,6 +9,7 @@ ENSURE_FILE_LINKS=(
     ~/.config/pulse/
     ~/.local/bin/
     ~/.local/share/
+    ~/.local/share/applications/
     ~/.gnupg/
 )
 
