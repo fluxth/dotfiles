@@ -8,4 +8,5 @@ if [[ "$(uname)" == "Linux" ]]; then
     fi
 
     export QT_AUTO_SCREEN_SCALE_FACTOR=1.5
+    export _JAVA_AWT_WM_NONREPARENTING=1
 fi
