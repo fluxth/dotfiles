@@ -27,8 +27,8 @@ let g:blamer_prefix = '   ✱ '
 nnoremap <Leader>sgb :BlamerToggle<CR>
 
 " qflist remaps
-nnoremap <leader>lg :call ToggleQFList(1)<CR>
-nnoremap <leader>lf :call ToggleQFList(0)<CR>
+"nnoremap <leader>lg :call ToggleQFList(1)<CR>
+"nnoremap <leader>lf :call ToggleQFList(0)<CR>
 
 let g:fluxth_qf_l = 0
 let g:fluxth_qf_g = 0
