@@ -14,8 +14,7 @@
     "javascriptreact",
     "typescriptreact",
     "css",
-    "scss",
-    "python"
+    "scss"
   ],
   "explorer.width": 35,
   "explorer.file.showHiddenFiles": true,
