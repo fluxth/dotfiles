@@ -52,3 +52,9 @@ fun! ToggleQFList(global)
         end
     endif
 endfun
+
+let g:neoformat_enabled_python = ['black']
+let g:neoformat_enabled_javascript = ['prettier']
+let g:neoformat_enabled_html = ['htmlbeautify']
+let g:neoformat_enabled_htmldjango = ['htmlbeautify']
+nnoremap <Leader><CR> :Neoformat<CR>
