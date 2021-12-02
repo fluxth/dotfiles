@@ -116,6 +116,7 @@ export MANPAGER='nvim +Man!'
 if [[ ! -z "$TMUX" ]]; then
     alias fzf="fzf-tmux"
 fi
+alias pj='cd ~/work/repo/ && cd $(ls | fzf)'
 
 # Platform dependent configurations
 export ENV_UNAME=$(uname)
