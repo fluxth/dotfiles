@@ -1,5 +1,5 @@
-#!/bin/zsh
-
+#!/bin/bash
+export QT_QPA_PLATFORMTHEME=gtk2
 setxkbmap -option caps:escape
 setxkbmap -option grp:alt_shift_toggle us,th
 setxkbmap -option altwin:swap_alt_win
@@ -7,9 +7,9 @@ setxkbmap -option altwin:swap_alt_win
 xsetroot -cursor_name left_ptr
 xset s on
 xset 480 120
-xset r rate 300 40
+xset r rate 300 40  # Auto key repeat rate
+xkbset bouncekeys 25  # Debounce mechanical keyboard chatter
 
-# TODO: Make laptop screen only work
 autorandr -c
 if [[ "$(xrandr -q | grep -w connected -c)" == "1" ]]; then
     bspc monitor eDP-1 -d term www edit fm av sys a b c ext
@@ -26,7 +26,7 @@ nitrogen --restore &
 picom &
 dunst &
 xss-lock ~/.local/bin/lock-screen &
-pgrep -x redshift > /dev/null || redshift-gtk &
+#pgrep -x redshift > /dev/null || redshift-gtk &
 pgrep -x nm-applet > /dev/null || nm-applet &
 
 bspc config border_width        2
