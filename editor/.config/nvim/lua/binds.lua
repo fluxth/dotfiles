@@ -99,3 +99,6 @@ map('v', 'K', ":m '<-2<cr>gv=gv", { noremap = true, silent = true })
 -- escape from highlighted search with, you guessed it: <esc>
 -- also clear command output when esc is pressed in normal mode
 map('n', '<esc>', ':nohls<cr>:echon<cr>', { noremap = true, silent = true })
+
+-- visual paste pls dont be annoying
+map('v', 'p', '"_dP', { noremap = true, silent = true })
