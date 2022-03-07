@@ -35,7 +35,7 @@ modules-left = date bspwm xwindow
 modules-center =
 modules-right = pulseaudio-control xkeyboard eth wlan battery cpu memory powermenu
 
-tray-position = ${env:TRAY_POS}
+tray-position = ${env:TRAY_POS:}
 tray-padding = 2
 tray-maxsize = 24
 
@@ -120,6 +120,10 @@ format = <label-layout>
 format-prefix = "⌨ "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #009900
+label-layout = %icon%
+layout-icon-0 = us;US;en
+layout-icon-1 = th;th
+layout-icon-2 = us;Dvorak;dv
 
 [module/cpu]
 type = internal/cpu
@@ -201,7 +205,7 @@ label-foreground = ${colors.foreground}
 
 # Options: https://github.com/marioortizmanero/polybar-pulseaudio-control
 # --sink-nickname "alsa_output.pci-0000_26_00.1.hdmi-stereo-extra1:· HDMI" 
-exec = pulseaudio-control --volume-max 100 --icons-volume "🔈,🔉,🔊" --icon-muted "🔇" --sink-nicknames-from "alsa.name" --format '$VOL_ICON ${VOL_LEVEL}% · $SINK_NICKNAME' --sink-nickname "alsa_output.pci-0000_26_00.1.hdmi-stereo-extra1:HDMI" --sink-nickname "alsa_output.usb-Focusrite_Scarlett_Solo_USB_Y741RVG940863D-00.analog-stereo:Monitors" listen
+exec = pulseaudio-control --volume-max 100 --icons-volume "🔈,🔉,🔊" --icon-muted "🔇" --sink-nicknames-from "device.description" --format '$VOL_ICON ${VOL_LEVEL}% · $SINK_NICKNAME' --sink-nickname "alsa_output.usb-Focusrite_Scarlett_Solo_USB_Y741RVG940863D-00.pro-output-0:Focusrite USB" --sink-nickname "alsa_output.pci-0000_00_1f.3.analog-stereo:Built-in Audio" listen
 click-right = exec pavucontrol &
 click-left = pulseaudio-control togmute
 click-middle = pulseaudio-control next-sink

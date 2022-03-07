@@ -2,7 +2,7 @@ configuration {
 	modi: "window,run,drun";
 	font: "SF Mono 16";
 	show-icons: true;
-	matching: "fuzzy";
+	/* matching: "fuzzy"; */
 	line-padding: 10;
 /*	dpi: 144;*/
 /*	width: 50;*/

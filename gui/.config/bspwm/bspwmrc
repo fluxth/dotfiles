@@ -8,7 +8,8 @@ xsetroot -cursor_name left_ptr
 xset s on
 xset 480 120
 xset r rate 300 40  # Auto key repeat rate
-xkbset bouncekeys 25  # Debounce mechanical keyboard chatter
+xkbset bouncekeys 35  # Debounce mechanical keyboard chatter
+numlockx &
 
 autorandr -c
 if [[ "$(xrandr -q | grep -w connected -c)" == "1" ]]; then
