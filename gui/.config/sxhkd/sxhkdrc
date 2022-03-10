@@ -37,9 +37,6 @@ super + ctrl + alt + l
 {_,ctrl + }Print
     spectacle {-m,-r}
 
-#super + \
-#    bspc wm -O HDMI1 eDP1
-
 #
 # media keys
 #
