@@ -16,6 +16,7 @@ PACKAGES=(
     exa
     git-delta
     fzf
+    pyenv
 )
 
 yay --noconfirm --needed -S ${PACKAGES[@]}
