@@ -131,3 +131,16 @@ export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
 # Load powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+TERM_CLEAR='\033[0m'
+TERM_BOLD='\033[1m'
+TERM_UNDL='\033[4m'
+
+TERM_RED='\033[31m'
+TERM_YELLOW='\033[33m'
+TERM_VIOLET='\033[35m'
+TERM_BEIGE='\033[36m'
+TERM_WHITE='\033[37m'
+
+echo "$TERM_YELLOW$TERM_BOLD$TERM_UNDL$(uname -n)$TERM_CLEAR ${TERM_WHITE}[$(uname -sr)]$TERM_CLEAR"
+echo " $TERM_YELLOW└$TERM_CLEAR $TERM_RED$(whoami)$TERM_CLEAR $TERM_VIOLET@$TERM_CLEAR $TERM_BEIGE$TTY$TERM_CLEAR\n"
