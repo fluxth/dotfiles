@@ -25,8 +25,7 @@ vim.g.tmuxline_preset = {
     win = '#I:#W#F',
     cwin = '#I:#W#F',
     x = '#{prefix_highlight}',
-    y = '%H:%M',
-    z = '%d-%b-%y',
+    y = '#(whoami)@#h',
     options = {
         ['status-justify'] = 'left',
     }
