@@ -25,6 +25,8 @@ opt.swapfile = false
 opt.backup = false
 
 opt.termguicolors = true
+opt.cursorline = true
+opt.cursorlineopt = 'number'
 opt.shortmess = opt.shortmess + 'c'
 
 opt.autoindent = true

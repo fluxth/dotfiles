@@ -14,6 +14,7 @@ map('n', '<leader>qQ', ':q!<cr>', { noremap = true, silent = true })
 map('n', '<leader>qa', ':qa<cr>', { noremap = true, silent = true })
 map('n', '<leader>qA', ':qa!<cr>', { noremap = true, silent = true })
 map('n', '<leader>w', ':w<cr>', { noremap = true, silent = true })
+map('n', '<leader>W', ':noa w<cr>', { noremap = true, silent = true })
 map('n', '<leader>qw', ':wq<cr>', { noremap = true, silent = true })
 map('n', '<leader>qW', ':wq!<cr>', { noremap = true, silent = true })
 map('n', '<leader>x', ':wq<cr>', { noremap = true, silent = true })
@@ -98,3 +99,6 @@ map('v', 'K', ":m '<-2<cr>gv=gv", { noremap = true, silent = true })
 -- escape from highlighted search with, you guessed it: <esc>
 -- also clear command output when esc is pressed in normal mode
 map('n', '<esc>', ':nohls<cr>:echon<cr>', { noremap = true, silent = true })
+
+-- visual paste pls dont be annoying
+map('v', 'p', '"_dP', { noremap = true, silent = true })
