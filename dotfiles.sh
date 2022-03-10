@@ -4,7 +4,6 @@ DOTFILE_DIRS=(
     bin
     editor
     gui
-    personal
     work
     shell
 )
