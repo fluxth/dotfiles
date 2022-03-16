@@ -25,9 +25,10 @@ opt.swapfile = false
 opt.backup = false
 
 opt.termguicolors = true
+opt.shortmess = opt.shortmess + 'c'
 opt.cursorline = true
 opt.cursorlineopt = 'number'
-opt.shortmess = opt.shortmess + 'c'
+vim.cmd([[autocmd FileType coc-explorer setlocal cursorlineopt=line]])
 
 opt.autoindent = true
 opt.encoding = 'utf-8'
