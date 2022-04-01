@@ -102,3 +102,11 @@ map('n', '<esc>', ':nohls<cr>:echon<cr>', { noremap = true, silent = true })
 
 -- visual paste pls dont be annoying
 map('v', 'p', '"_dP', { noremap = true, silent = true })
+
+-- search selected text in visual mode
+map('v', '/', 'y/<c-r>"<cr>', { noremap = true, silent = true })
+map('v', '?', 'y?<c-r>"<cr>', { noremap = true, silent = true })
+
+-- search the word under cursor in normal mode
+map('n', '<leader>/', 'yiw/<c-r>"<cr>', { noremap = true, silent = true })
+map('n', '<leader>?', 'yiw?<c-r>"<cr>', { noremap = true, silent = true })
