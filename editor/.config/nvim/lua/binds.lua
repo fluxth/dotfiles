@@ -72,6 +72,8 @@ map('v', '>', '>gv', { noremap = true, silent = true })
 -- disable ex mode
 map('n', 'Q', '<nop>', { noremap = true, silent = true })
 map('n', 'q:', '<nop>', { noremap = true, silent = true })
+map('v', 'Q', '<nop>', { noremap = true, silent = true })
+map('v', 'q:', '<nop>', { noremap = true, silent = true })
 
 -- qflist remaps
 map('n', '<c-left>', ':lprev<cr>zz', { noremap = true, silent = true })
@@ -92,9 +94,13 @@ map('i', '.', '.<c-g>u', { noremap = true, silent = true })
 map('i', ',', ',<c-g>u', { noremap = true, silent = true })
 map('i', '=', '=<c-g>u', { noremap = true, silent = true })
 
+-- ignore J,K in visual mode
+map('v', 'J', 'j', { noremap = true, silent = true })
+map('v', 'K', 'k', { noremap = true, silent = true })
+
 -- moving texts
-map('v', 'J', ":m '>+1<cr>gv=gv", { noremap = true, silent = true })
-map('v', 'K', ":m '<-2<cr>gv=gv", { noremap = true, silent = true })
+map('v', '<c-J>', ":m '>+1<cr>gv=gv", { noremap = true, silent = true })
+map('v', '<c-K>', ":m '<-2<cr>gv=gv", { noremap = true, silent = true })
 
 -- escape from highlighted search with, you guessed it: <esc>
 -- also clear command output when esc is pressed in normal mode
