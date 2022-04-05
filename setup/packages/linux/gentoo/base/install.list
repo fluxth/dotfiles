@@ -1,0 +1,16 @@
+app-editors/neovim
+sys-apps/ripgrep
+x11-misc/xclip
+x11-terms/alacritty
+app-misc/tmux
+dev-util/rustup
+#npm
+net-libs/nodejs
+dev-python/pip
+net-misc/yt-dlp
+sys-apps/exa
+dev-util/git-delta
+app-shells/fzf
+#pyenv
+
+#aur:ttf-meslo-nerd-font-powerlevel10k
