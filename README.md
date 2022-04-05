@@ -10,17 +10,26 @@ An install script `dotfiles.sh` is included to manage linking/unlinking of confi
 
 ## Requirements
 
-- **Platform** 
-  - Linux _(Package install is currently only supported on Arch Linux)_
-  - macOS _(Both Intel and ARM-based Macs are supported)_
+**Supported Platforms** 
 
-- **Dependencies** - These software must be avaliable on `PATH` before installing dotfiles.
-  - GNU stow: `stow`
-  - cURL: `curl` (For package install only)
+| OS      | Variant    | dotfiles | Package Install |
+|:-------:|:----------:|:--------:|:---------------:|
+| Linux   | Arch Linux | ✅ | ✅ |
+| Linux   | Manjaro    | ✅ | ✅ |
+| Linux   | Gentoo     | ✅ | 🔄 |
+| Linux   | Debian     | ✅ | 🔄 |
+| Linux   | *          | ✅ | ❌ |
+| macOS   | arm64      | ✅ | ✅ |
+| macOS   | x86_64     | ✅ | ✅ |
+| Windows | *          | ❌ | ❌ |
 
-- **Platform-based Dependencies** - If you are using the following platforms, and wish to use the package install feature.
-  - Arch Linux: [`yay`](https://github.com/Jguer/yay)
-  - macOS: Xcode or Xcode command-line tools: `xcode-select --install`
+**Dependencies** - These software must be available on `PATH` before installing dotfiles.
+
+| OS      | Variant    | dotfiles | Package Install |
+|:-------:|:----------:|:--------:|:---------------:|
+| *       | *          | `stow`   | `curl`          |
+| Linux   | Arch Linux |          | [`yay`](https://github.com/Jguer/yay) |
+| macOS   | *          |          | [`brew`](https://brew.sh) |
 
 ## Installation
 
