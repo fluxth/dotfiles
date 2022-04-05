@@ -127,6 +127,7 @@ detect_os(){
             DETECTED_OS="linux"
             local distro=$(awk -F= '/^NAME/{print $2}' /etc/os-release | sed 's/"//g')
             case "$distro" in
+                "Manjaro Linux") ;&
                 "Arch Linux")
                     DETECTED_OS_VARIANT="archlinux"
                     REQUIRED_INSTALL_BINARIES+=(yay)
