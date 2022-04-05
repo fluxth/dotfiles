@@ -455,6 +455,11 @@ install_base(){
 
 install_desktop(){
     install_pkg_list "desktop/install.list"
+
+    if is_platform "linux" "archlinux"; then
+        log_progress "Setting up ly login manager"
+        sudo systemctl enable ly
+    fi
 }
 
 install_extra(){
