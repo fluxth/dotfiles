@@ -10,7 +10,6 @@ thunar
 thunar-volman
 gvfs
 playerctl
-pamixer
 pipewire
 pipewire-alsa
 pipewire-jack
