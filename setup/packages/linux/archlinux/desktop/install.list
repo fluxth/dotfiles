@@ -11,6 +11,10 @@ thunar-volman
 gvfs
 playerctl
 pamixer
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
 wireplumber
 brightnessctl
 network-manager-applet
