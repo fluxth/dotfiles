@@ -10,23 +10,32 @@ An install script `dotfiles.sh` is included to manage linking/unlinking of confi
 
 ## Requirements
 
-- **Platform** 
-  - Linux _(Package install is currently only supported on Arch Linux)_
-  - macOS _(Both Intel and ARM-based Macs are supported)_
+**Supported Platforms** 
 
-- **Dependencies** - These software must be avaliable on `PATH` before installing dotfiles.
-  - GNU stow: `stow`
-  - cURL: `curl`
+| OS      | Variant    | dotfiles | Package Install |
+|:-------:|:----------:|:--------:|:---------------:|
+| Linux   | Arch Linux | ✅ | ✅ |
+| Linux   | Manjaro    | ✅ | ✅ |
+| Linux   | Gentoo     | ✅ | 🔄 |
+| Linux   | Debian     | ✅ | 🔄 |
+| Linux   | *          | ✅ | ❌ |
+| macOS   | arm64      | ✅ | ✅ |
+| macOS   | x86_64     | ✅ | ✅ |
+| Windows | *          | ❌ | ❌ |
 
-- **Platform-based Dependencies** - If you are using the following platforms, and wish to use the package install feature.
-  - Arch Linux: [`yay`](https://github.com/Jguer/yay)
-  - macOS: Xcode or Xcode command-line tools: `xcode-select --install`
+**Dependencies** - These software must be available on `PATH` before installing dotfiles.
+
+| OS      | Variant    | dotfiles | Package Install |
+|:-------:|:----------:|:--------:|:---------------:|
+| *       | *          | `stow`   | `curl`          |
+| Linux   | Arch Linux |          | [`yay`](https://github.com/Jguer/yay) |
+| macOS   | *          |          | [`brew`](https://brew.sh) |
 
 ## Installation
 
 To link dotfiles to your XDG directories, run:
 ```bash
-./dotfiles.sh
+./dotfiles.sh link
 ```
 
 To unlink previously linked dotfiles, run:
@@ -34,29 +43,26 @@ To unlink previously linked dotfiles, run:
 ./dotfiles.sh unlink
 ```
 
-To install packages then link dotfiles, run:
+To install base (minimal) packages then link dotfiles, run:
 ```bash
-./dotfiles.sh install
+./dotfiles.sh install base
 ```
 
-To install baseline packages, GUI packages and link dotfiles, run:
+To install a Linux desktop, run:
 ```bash
-./dotfiles.sh full-install
+./dotfiles.sh install base desktop
+# or
+./dotfiles.sh install base desktop extra
 ```
 
-To only install extra packages, run:
+To install extra packages, run:
 ```bash
-./dotfiles.sh extras-install
+./dotfiles.sh install extra
 ```
 
-To clean your XDG directories before linking, run:
+To detect and clean your target directory of link conflicts, run:
 ```bash
 ./dotfiles.sh clean
-```
-
-You can also chain actions:
-```bash
-./dotfiles.sh clean full-install extras-install
 ```
 
 For help, run:
