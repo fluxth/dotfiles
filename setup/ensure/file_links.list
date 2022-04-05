@@ -1,0 +1,10 @@
+# Files in these paths will link as individual files
+.config/coc/extensions/
+.config/gtk-3.0/
+.config/mpv/
+.config/systemd/user/
+.config/pulse/
+.local/bin/
+.local/share/
+.local/share/applications/
+.gnupg/

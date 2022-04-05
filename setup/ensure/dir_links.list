@@ -1,0 +1,4 @@
+# These paths will link as directories
+.config/iterm2
+.config/karabiner
+.config/zsh

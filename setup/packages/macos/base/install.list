@@ -1,0 +1,12 @@
+nvim
+ripgrep
+alacritty
+tmux
+rustup-init
+node
+yt-dlp
+exa
+git-delta
+fzf
+
+cask:font-meslo-lg-nerd-font
