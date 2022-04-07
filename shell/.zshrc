@@ -116,7 +116,8 @@ export MANPAGER='nvim +Man!'
 if [[ ! -z "$TMUX" ]]; then
     alias fzf="fzf-tmux"
 fi
-alias pj='cd ~/work/repo/ && cd $(ls | fzf)'
+PROJECTS_PATH=$HOME/work/repo
+alias pj='cd "$PROJECTS_PATH/"$(ls $PROJECTS_PATH | fzf)'
 
 # Platform dependent configurations
 export ENV_UNAME=$(uname)
