@@ -1,0 +1,17 @@
+base-devel
+neovim
+ripgrep
+xclip
+alacritty
+tmux
+rustup
+npm
+nodejs
+python-pip
+yt-dlp
+exa
+git-delta
+fzf
+pyenv
+
+aur:ttf-meslo-nerd-font-powerlevel10k

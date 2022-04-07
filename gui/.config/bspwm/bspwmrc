@@ -64,6 +64,7 @@ bspc rule -a KeePassXC      desktop=sys  follow=on
 
 # Floating window
 bspc rule -a QjackCtl       state=floating
+bspc rule -a qemu-system-x86_64 state=floating rectangle=1920x1080+1000+100
 
 # Window manager exceptions
 bspc rule -a polybar        border=off manage=off
