@@ -132,6 +132,9 @@ detect_os(){
                     DETECTED_OS_VARIANT="archlinux"
                     REQUIRED_INSTALL_BINARIES+=(yay)
                 ;;
+                "Fedora Linux")
+                    DETECTED_OS_VARIANT="fedora"
+                ;;
             esac
         ;;
         darwin*)
@@ -320,6 +323,12 @@ install_pkg_list(){
             log_progress "Installing ${#packages_aur[@]} AUR packages (yay)"
             log_dbg "Packages: ${packages_aur[@]}"
             yay -S --needed --noconfirm ${packages_aur[@]}
+        fi
+    elif is_platform "linux" "fedora"; then
+        if [[ "${#packages[@]}" != 0 ]]; then
+            log_progress "Installing ${#packages[@]} packages (dnf)"
+            log_dbg "Packages: ${packages[@]}"
+            sudo dnf install -y ${packages[@]}
         fi
     elif is_platform "macos"; then
         if [[ "${#packages[@]}" != 0 ]]; then
