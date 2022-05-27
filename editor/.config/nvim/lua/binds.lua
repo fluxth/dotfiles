@@ -116,3 +116,14 @@ map('v', '?', 'y?<c-r>"<cr>', { noremap = true, silent = true })
 -- search the word under cursor in normal mode
 map('n', '<leader>/', 'yiw/<c-r>"<cr>', { noremap = true, silent = true })
 map('n', '<leader>?', 'yiw?<c-r>"<cr>', { noremap = true, silent = true })
+
+-- tabz
+map('n', '<leader>1', '1gt', { noremap = true, silent = true })
+map('n', '<leader>2', '2gt', { noremap = true, silent = true })
+map('n', '<leader>3', '3gt', { noremap = true, silent = true })
+map('n', '<leader>4', '4gt', { noremap = true, silent = true })
+map('n', '<leader>5', '5gt', { noremap = true, silent = true })
+map('n', '<leader>6', '6gt', { noremap = true, silent = true })
+map('n', '<leader>7', '7gt', { noremap = true, silent = true })
+map('n', '<leader>8', '8gt', { noremap = true, silent = true })
+map('n', '<leader>9', '9gt', { noremap = true, silent = true })
