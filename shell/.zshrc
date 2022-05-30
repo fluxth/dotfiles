@@ -117,7 +117,14 @@ if [[ ! -z "$TMUX" ]]; then
     alias fzf="fzf-tmux"
 fi
 PROJECTS_PATH=$HOME/work/repo
-alias pj='cd "$PROJECTS_PATH/"$(ls $PROJECTS_PATH | fzf)'
+pj(){
+    local flags=""
+    if [[ "$1" != "" ]]; then
+        flags+="-q $1"
+    fi
+    local result=$(ls $PROJECTS_PATH | fzf --preview "cd $PROJECTS_PATH/{} && git status" $flags)
+    cd "$PROJECTS_PATH/$result"
+}
 
 # Platform dependent configurations
 export ENV_UNAME=$(uname)
