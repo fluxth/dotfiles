@@ -16,12 +16,15 @@ An install script `dotfiles.sh` is included to manage linking/unlinking of confi
 |:-------:|:----------:|:--------:|:---------------:|
 | Linux   | Arch Linux | ✅ | ✅ |
 | Linux   | Manjaro    | ✅ | ✅ |
+| Linux   | Fedora     | ✅ | ✅ ₍₁₎ |
 | Linux   | Gentoo     | ✅ | 🔄 |
 | Linux   | Debian     | ✅ | 🔄 |
 | Linux   | *          | ✅ | ❌ |
 | macOS   | arm64      | ✅ | ✅ |
 | macOS   | x86_64     | ✅ | ✅ |
 | Windows | *          | ❌ | ❌ |
+
+(1) - `base` packages only
 
 **Dependencies** - These software must be available on `PATH` before installing dotfiles.
 
