@@ -20,6 +20,7 @@ require('packer').startup(function(use)
     use 'preservim/nerdcommenter'
     use 'chaoren/vim-wordmotion'
     use 'sbdchd/neoformat'
+    use 'jiangmiao/auto-pairs'
 
     -- gui enhancements
     use 'mhinz/vim-startify'
