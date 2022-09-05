@@ -126,6 +126,8 @@ pj(){
     cd "$PROJECTS_PATH/$result"
 }
 
+alias nvmi='source /usr/share/nvm/init-nvm.sh'
+
 # Platform dependent configurations
 export ENV_UNAME=$(uname)
 export ENV_ARCH=$(uname -m)
