@@ -17,6 +17,7 @@ require('packer').startup(function(use)
     use 'APZelos/blamer.nvim'
     use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }}
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use 'nvim-treesitter/nvim-treesitter-context'
     use 'preservim/nerdcommenter'
     use 'chaoren/vim-wordmotion'
     use 'sbdchd/neoformat'
