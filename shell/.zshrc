@@ -9,6 +9,7 @@ fi
 
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
+export CARGO_TARGET_DIR="$HOME/.cargo/target"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
