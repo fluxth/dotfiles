@@ -15,11 +15,13 @@
     "typescriptreact",
     "css",
     "scss",
-    "python"
+    "python",
+    "svelte"
   ],
   "explorer.width": 35,
   "explorer.file.showHiddenFiles": true,
   "explorer.icon.enableNerdfont": true,
   "explorer.icon.source": "nvim-web-devicons",
-  "explorer.file.child.template": "[git | 2] [selection | clip | 1] [indent][icon | 1] [diagnosticError & 1][filename omitCenter 1][modified][readonly] [linkIcon & 1][link growRight 1 omitCenter 5]"
+  "explorer.file.child.template": "[git | 2] [selection | clip | 1] [indent][icon | 1] [diagnosticError & 1][filename omitCenter 1][modified][readonly] [linkIcon & 1][link growRight 1 omitCenter 5]",
+  "svelte.enable-ts-plugin": true
 }
