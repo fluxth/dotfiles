@@ -1,55 +1,46 @@
 local opt = vim.opt
 
-opt.filetype = 'on'
-opt.syntax = 'on'
-
 opt.exrc = true
 opt.compatible = false
 opt.secure = true
+opt.errorbells = false
+opt.encoding = 'utf-8'
 
 opt.hidden = true
 opt.showmatch = false
 opt.showmode = false
-opt.errorbells = false
+
+opt.autoindent = true
 opt.tabstop = 4
 opt.softtabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
 opt.smartindent = true
+
 opt.number = true
 opt.relativenumber = true
-opt.smartcase = true
-opt.ignorecase = true
 
 opt.swapfile = false
 opt.backup = false
+opt.undofile = true
+opt.undodir = vim.fn.stdpath('data') .. '/undodir'
 
 opt.termguicolors = true
 opt.shortmess = opt.shortmess + 'c'
 opt.cursorline = true
 opt.cursorlineopt = 'number'
-vim.cmd([[autocmd FileType coc-explorer setlocal cursorlineopt=line]])
-
-opt.autoindent = true
-opt.encoding = 'utf-8'
-opt.scrolloff = 4
-opt.joinspaces = false
--- vim.opt.nowrap = true
 
 -- Searches
 opt.hlsearch = true
 opt.incsearch = true
+opt.smartcase = true
+opt.ignorecase = true
 
 -- Sane splits
 opt.splitright = true
 opt.splitbelow = true
 
 opt.signcolumn = 'yes'
-
-opt.undofile = true
-opt.undodir =  vim.fn.stdpath('data') .. '/undodir'
-
-opt.mouse = 'nvi'
 
 opt.timeoutlen = 1000
 opt.updatetime = 300
@@ -59,9 +50,9 @@ opt.colorcolumn = '80'
 opt.showbreak = '↪ '
 opt.list = true
 opt.listchars = {
-    nbsp        = '¬',
-    extends     = '»',
-    precedes    = '«',
-    trail       = '·',
-    tab         = '→ ',
+    nbsp     = '¬',
+    extends  = '»',
+    precedes = '«',
+    trail    = '·',
+    tab      = '→ ',
 }

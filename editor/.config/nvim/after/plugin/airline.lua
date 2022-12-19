@@ -2,13 +2,15 @@
 vim.g.airline_powerline_fonts = 1
 vim.g.airline_theme = 'base16_vim'
 
-vim.g.airline_symbols = {
-    linenr = ' L:',
-    colnr = ' C:',
-    maxlinenr = '',
-    notexists = '[?]',
-    dirty = '[+]',
-}
+vim.g.airline_symbols.linenr = ' L:'
+vim.g.airline_symbols.colnr = ' C:'
+vim.g.airline_symbols.maxlinenr = ''
+vim.g.airline_symbols.notexists = '[?]'
+vim.g.airline_symbols.dirty = '[+]'
+
+vim.g.airline_symbols.space = '\a0'
+
+vim.g.airline_exclude_filetypes = {'NvimTree'}
 
 vim.g['airline#extensions#scrollbar#enabled'] = 0
 
