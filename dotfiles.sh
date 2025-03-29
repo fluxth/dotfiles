@@ -451,15 +451,6 @@ install_base(){
     cd $(join_path $OPT_TARGET_DIR ".config/coc/extensions")
     npm install --ignore-scripts --no-lockfile --production --legacy-peer-deps
     cd -
-
-    log_progress "Installing neovim packer"
-    mkdircd $(join_path $OPT_TARGET_DIR ".local/share/nvim/site/pack/packer/start")
-    git clone https://github.com/wbthomason/packer.nvim
-    cd -
-
-    log_progress "Installing neovim plugins"
-    nvim -u $(join_path $OPT_TARGET_DIR ".config/nvim/lua/plugins.lua") --noplugin \
-        -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 }
 
 install_desktop(){
