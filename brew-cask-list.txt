@@ -1,0 +1,13 @@
+alacritty
+eloston-chromium
+emacs-mac
+font-fontawesome
+gimp
+karabiner-elements
+keepassxc
+kitty
+meld
+stats
+ungoogled-chromium
+utm
+xquartz
