@@ -44,6 +44,7 @@ map('n', '<c-p>', ':lua require("telescope.builtin").git_files()<cr>', options)
 
 map('n', '<leader>fg', ':lua require("telescope.builtin").git_files()<cr>', options)
 map('n', '<leader>ff', ':lua require("telescope.builtin").find_files()<cr>', options)
+map('n', '<leader>fu', ':lua require("telescope.builtin").resume()<cr>', options)
 
 map('n', '<leader>fs', ':lua require("telescope.builtin").live_grep()<cr>', options)
 map('n', '<leader>fw', ':lua require("telescope.builtin").grep_string { search = vim.fn.expand("<cword>") }<cr>', options)

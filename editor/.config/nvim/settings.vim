@@ -3,6 +3,8 @@ autocmd Filetype rust set colorcolumn=100
 autocmd BufRead Cargo.toml call crates#toggle()
 
 autocmd Filetype python set colorcolumn=88
+autocmd Filetype terraform set filetype=hcl
+autocmd BufRead,BufNewFile *.bats set filetype=bash
 
 " tsconfig.json is actually jsonc, help TypeScript set the correct filetype
 autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
@@ -30,28 +32,28 @@ nnoremap <Leader>sgb :BlamerToggle<CR>
 "nnoremap <leader>lg :call ToggleQFList(1)<CR>
 "nnoremap <leader>lf :call ToggleQFList(0)<CR>
 
-let g:fluxth_qf_l = 0
-let g:fluxth_qf_g = 0
-
-fun! ToggleQFList(global)
-    if a:global
-        if g:fluxth_qf_g == 1
-            let g:fluxth_qf_g = 0
-            cclose
-        else
-            let g:fluxth_qf_g = 1
-            copen
-        end
-    else
-        if g:fluxth_qf_l == 1
-            let g:fluxth_qf_l = 0
-            lclose
-        else
-            let g:fluxth_qf_l = 1
-            lopen
-        end
-    endif
-endfun
+"let g:fluxth_qf_l = 0
+"let g:fluxth_qf_g = 0
+"
+"fun! ToggleQFList(global)
+"    if a:global
+"        if g:fluxth_qf_g == 1
+"            let g:fluxth_qf_g = 0
+"            cclose
+"        else
+"            let g:fluxth_qf_g = 1
+"            copen
+"        end
+"    else
+"        if g:fluxth_qf_l == 1
+"            let g:fluxth_qf_l = 0
+"            lclose
+"        else
+"            let g:fluxth_qf_l = 1
+"            lopen
+"        end
+"    endif
+"endfun
 
 let g:neoformat_enabled_python = ['black']
 let g:neoformat_enabled_javascript = ['prettier']

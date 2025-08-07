@@ -14,6 +14,7 @@ highlight('Normal guibg=none')
 -- set custom colors for various plugins
 highlight('link Blamer GruvboxBg2')  -- make git blames more subtle
 highlight('link CocHintSign GruvboxBg2')  -- make rust inlay hints more subtle
+highlight('link CocInlayHint GruvboxBg2')  -- make coc inlay hints more subtle
 highlight('link GitSignsChange GruvboxOrangeSign')  -- orange gitsign when line is changed
 
 -- coc diagnostic styles on signcolumn

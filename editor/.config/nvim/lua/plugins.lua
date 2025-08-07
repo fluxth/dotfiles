@@ -41,13 +41,15 @@ require('packer').startup(function(use)
 
     -- language plugins
     use 'rust-lang/rust.vim'
-    use 'psf/black'
+    --use 'psf/black'
 
     -- snippets
     use 'mlaursen/vim-react-snippets'
 
     -- tmux
     use 'edkolev/tmuxline.vim'
+
+    use 'dstein64/vim-startuptime'
 end)
 
 -- additional settings
