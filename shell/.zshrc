@@ -1,4 +1,5 @@
 export GPG_TTY=$(tty)
+export TZ=Etc/UTC
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -130,6 +131,46 @@ fi
 # PATH configuration
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+export PATH="$HOME/go/bin:$PATH"
+
+PROJECTS_PATH=$HOME/work/repo
+
+pj(){
+    local flags=""
+    if [[ "$1" != "" ]]; then
+        flags+="-q $1"
+    fi
+
+    local result=$(ls $PROJECTS_PATH | fzf --preview "cd $PROJECTS_PATH/{} && git status" $flags)
+    if [[ "$result" != "" ]]; then
+        cd "$PROJECTS_PATH/$result"
+    fi
+}
+
+nvim() {
+    set +e
+    git_base="$(git rev-parse --show-toplevel 2> /dev/null)"
+    if [[ -f "$git_base/uv.lock" ]]; then
+        uv run /opt/homebrew/bin/nvim $@
+    elif [[ -f "$git_base/poetry.lock" ]]; then
+        poetry run /opt/homebrew/bin/nvim $@
+    else
+        /opt/homebrew/bin/nvim $@
+    fi
+}
+
+export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
+
 # Load powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -145,3 +186,21 @@ TERM_WHITE='\033[37m'
 
 echo "$TERM_YELLOW$TERM_BOLD$TERM_UNDL$(uname -n)$TERM_CLEAR ${TERM_WHITE}[$(uname -sr)]$TERM_CLEAR"
 echo " $TERM_YELLOW└$TERM_CLEAR $TERM_RED$(whoami)$TERM_CLEAR $TERM_VIOLET@$TERM_CLEAR $TERM_BEIGE$TTY$TERM_CLEAR\n"
+
+eval $(thefuck --alias)
+export PYRIGHT_PYTHON_IGNORE_WARNINGS=1
+
+alias gam="/Users/thitat.fluke/.local/bin/gamadv-xtd3/gam"
+
+staging_tail(){
+  logs="$(for component in api data-migrator debug diagnostics flipt object-restore-event-processor onboarding operation-log-manager operation-log-processor tenant-sync ; do printf '/aws/lambda/nobita2-staging-%s\n' "$component" ; done)"
+  # shellcheck disable=SC2046
+  cw tail -f $(printf '%s\n' "$logs" | paste -s -d' ' -)
+}
+
+export NVIM_APPNAME=nvim-config
+
+lgtm(){
+    echo -n '<img title="LGTM" alt="LGTM" align="absmiddle" height="20" src="https://reviewable.io/lgtm.png">' | pbcopy
+}
+
