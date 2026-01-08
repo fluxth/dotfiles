@@ -1,8 +1,0 @@
-#!/bin/sh
-if [[ "$ENV_UNAME" == "Darwin" ]]; then
-    echo "Starting x86_64 shell..."
-    arch -x86_64 /bin/zsh
-else
-    echo "Rosetta 2 not available on this platform."
-    exit 1
-fi
